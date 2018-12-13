@@ -1,3 +1,110 @@
+/*
+* Theme Name: Job Stock
+* Author: Themez Hub
+* Version: 4.0
+* Last Change: 4 July 2018
+  Author URI    : http://www.themezhub.com/
+-------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Fonts
+# General Setting
+# Custom Settings
+# Form And Button
+# Heading Style
+# Pagination Style
+# Search Filter Style
+# Navigation Style Setting
+# First Home Page Banner Style Settings
+# Search form style
+# Banner Brand Carousel
+# Second Home Page Banner Style Settings
+# Banner bottom search form
+# Third Home Page Banner Style Settings
+# Search job Style
+# Fourth Home Page Banner Style Settings
+# Five Home Page Banner Style Settings
+# Advance Job Feature
+# Work Process Style Settings
+# Top features Style Settings
+# Video Part Style Settings
+# Work Process Style Settings
+# Testimonials Style Settings
+# Call To Actione Style Settings
+# Pricing Table Style Settings
+# Download app Style Settings
+# Footer Part Style Settings
+# Footer Social Media
+# Footer Contact Form Style
+# Footer Copyright Style
+# Inner Page Style Settings
+	-Common Style Setting
+	-Inner Dropdown Button Style
+	-Search Filter
+	
+# Browse Job Style Settings
+# Browse Company Style Settings
+# Browse Resume Style Settings
+# Manage Candidate Style Settings
+# Manage Employee Style Settings
+# Manage Company Style Settings
+# Manage Resume Style Settings
+# Manage Resume 2 Style Settings
+# Job, Resume and Company Detail Page Style 
+# Add Company, Resume and Job Page Style Settings
+	-Bootstrap Editor
+	-file field
+	
+#  Company detail, Job Detail and Resume Detail Page Style Settings
+# Accordion  Page Style Settings
+	-simple Accordian style
+	-style for accordian three
+	
+# Tab Page Style Settings
+	-Simple Tab style
+	-Icon Tab style
+	
+# Login and Signup Popup
+# Contact us Page Style Settings
+# Blog Page Page Design
+	-Sidebar Star
+	
+# Blog Detail Page Style Settings
+	-Blog Comment Style Settings
+	
+# Login Signup And Forget password page style settings
+# Signup 2 page design
+# Search Job Page Design
+# Brows job in Grid Style 
+# New Search Job Style
+	Sidebar Style
+# New Job Detail Style
+# Error page design
+# Employer & Candidate Profile Page Design
+# Dropper Settings
+
+# New Pages Style
+	-Hero Banner section
+	-Freelancer
+	-Paid Candidat
+	-popular job
+	-How It Works
+	-Freelancer Detail
+	-job Apply Detail
+	-Login
+	-Review & New Detail Page
+	-Default Sidebar
+		-Detail For Freelancer
+		-Job Share Sidebar
+
+# Responsiveness Start 
+--------------------------------------------------------*/
+
+/* ==========================================================================
+Fonts
+========================================================================== */
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700');
@@ -429,7 +536,7 @@ html body .cl-white{
 	border-bottom:4px solid #eaeff5 !important;
 }
 .br-fade{
-	border-color:rgba(97, 107, 127, 0.07) !important;
+	border-color:rgba(97, 107, 127, 0.07) !important
 }
 html body .br-info{
 	border-color:#01b2ac !important;
@@ -453,7 +560,7 @@ html body .br-gary{
 	border-color:#e2e5e8 !important;
 }
 html body .br-default{
-	border-color:#283447 !important; 
+	border-color:#283447 !important; //fix#e2e5e8
 }
 /*------------ Global Settings: Status BG Style --------------*/
 html body .bg-online{
@@ -1960,8 +2067,8 @@ padding:0px;
 	Slide Banner 
 --------------------------------------------*/
 .slide-banner {
-    background-size: cover  !important;
-    background-position: center  !important;
+    background-size: cover !important;
+    background-position: center !important;
     padding: 12% 0;
     position: relative;
     margin: 0;

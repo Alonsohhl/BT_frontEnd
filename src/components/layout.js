@@ -7,6 +7,7 @@ import Header from './header'
 import './layout.scss'
 import './main.scss'
 import './style-green.scss'
+import './css/plugins.css'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -22,15 +23,25 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Helmet
+          
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'Bolsa de Trabajo UCSM' },
+            { name: 'keywords', content: 'Bolsa de Empleo,Trabajo,Bolsa de Trabajo, UCSM' },
           ]}
         >
-          <html lang="en" />
+          <html lang="es" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+
+        <div>
+          <div className="Loader" />
+          <div className="wrapper">
+
+
+            <Header siteTitle={data.site.siteMetadata.title} />
+          </div></div>
+
+          
         <div
           style={{
             margin: '0 auto',
@@ -40,11 +51,17 @@ const Layout = ({ children }) => (
           }}
         >
           {children}
+
+      
         </div>
+        
       </>
     )}
   />
 )
+
+
+
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
