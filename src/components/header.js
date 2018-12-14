@@ -16,7 +16,7 @@ const Header =({ siteTitle}) => (
   {/* Start Header Navigation */}
   <div className="navbar-header">
     <a className="navbar-brand" href="index.html">
-      <img src={logo} className="logo logo-scrolled" alt />
+      <img src={logo} className="logo logo-scrolled" alt="Logo" />
     </a>
   </div>
   {/* Collect the nav links, forms, and other content for toggling */}

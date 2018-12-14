@@ -3,7 +3,8 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
-
+import openRightMenu from '../components/assets/js/customBT'
+import closeRightMenu from '../components/assets/js/customBT'
 
 const IndexPage = () => (
   <Layout>
@@ -15,10 +16,12 @@ const IndexPage = () => (
     </div>
     <Link to="/page-2/">Go to page 2</Link>
     
- 
+    
 
+		
 
   </Layout>
+  
 )
 
 //var $= require('../components/assets/jquery.min.js')
