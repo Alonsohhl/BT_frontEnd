@@ -16,7 +16,7 @@ const Footer =( ) => (
             <div className="footer-rows-left">
               <div className="footer-row">
                 <div className="footer-row-inner footer-logo">
-                  <img src="images/logo2.png" alt />
+                  <img src="images/logo2.png" alt="logo" />
                 </div>
               </div>
             </div>
@@ -54,9 +54,9 @@ const Footer =( ) => (
               <div className="footer-row">
                 <div className="footer-row-inner">
                   <select className="selectpicker language-switcher" data-selected-text-format="count" data-size={5}>
-                    <option selected>English</option>
+                    <option>English</option>
                     <option>Français</option>
-                    <option>Español</option>
+                    <option defaultValue="selected">Español</option>
                     <option>Deutsch</option>
                   </select>
                 </div>

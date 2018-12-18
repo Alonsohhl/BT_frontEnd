@@ -6,6 +6,8 @@ import Image from '../components/image'
 
 import Featured_jobs from '../components/featured_jobs'
 import Footer from '../components/footer'
+
+
 //import openRightMenu from '../components/assets/js/customBT'
 //import closeRightMenu from '../components/assets/js/customBT'
 

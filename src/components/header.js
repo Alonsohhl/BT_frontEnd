@@ -2,7 +2,59 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-//import logo from "../img/logo.png"
+
+class HeaderNavImg extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {addClass: false}
+  }
+  toggle() {
+    this.setState({addClass: !this.state.addClass});
+  }
+    render() {
+      let boxClass = ["header-notifications user-menu"];
+      if(this.state.addClass) {
+        boxClass.push('active');
+      }
+      return (
+        <div className={boxClass.join(' ')} onClick={this.toggle.bind(this)}>
+                  <div className="header-notifications-trigger">
+                    <a href="#"><div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" /></div></a>
+                    
+                  </div>
+                  
+                  {/* Dropdown */}
+                  <div className="header-notifications-dropdown">
+                    {/* User Status */}
+                    <div className="user-status">
+                      {/* User Name / Avatar */}
+                      <div className="user-details">
+                        <div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg"  /></div>
+                        <div className="user-name">
+                          Tom Smith <span>Freelancer</span>
+                        </div>
+                      </div>
+                      {/* User Status Switcher */}
+                      <div className="status-switch" id="snackbar-user-status">
+                        <label className="user-online current-status">Online</label>
+                        <label className="user-invisible">Invisible</label>
+                        {/* Status Indicator */}
+                        <span className="status-indicator" aria-hidden="true" />
+                      </div>	
+                    </div>
+                    <ul className="user-menu-small-nav">
+                      <li><a href="dashboard.html"><i className="icon-material-outline-dashboard" /> Dashboard</a></li>
+                      <li><a href="dashboard-settings.html"><i className="icon-material-outline-settings" /> Settings</a></li>
+                      <li><a href="index-logged-out.html"><i className="icon-material-outline-power-settings-new" /> Logout</a></li>
+                    </ul>
+                  </div>
+                </div>
+              
+    
+
+      )
+}
+}
 
 
 
@@ -16,8 +68,9 @@ const Header =({ siteTitle}) => (
             <div className="left-side">
               {/* Logo */}
               <div id="logo">
-              <Link to="/page-2/">Go to page 2</Link>
-                <a href="index.html"><img src="images/logo2.png" data-sticky-logo="images/logo.png" data-transparent-logo="images/logo2.png" alt="logoBolsadeTrabajo" /></a>
+              <Link to="/">
+                <img src="images/logo2.png" data-sticky-logo="images/logo.png" data-transparent-logo="images/logo2.png" alt="logoBolsadeTrabajo"/>
+              </Link>
               </div>
               {/* Main Navigation */}
               <nav id="navigation">
@@ -116,7 +169,7 @@ const Header =({ siteTitle}) => (
             {/* Right Side Content / End */}
             <div className="right-side">
               {/*  User Notifications */}
-              <div className="header-widget hide-on-mobile">
+              <div className="header-widget ">
                 {/* Notifications */}
                 <div className="header-notifications">
                   {/* Trigger */}
@@ -234,37 +287,11 @@ const Header =({ siteTitle}) => (
               {/*  User Notifications / End */}
               {/* User Menu */}
               <div className="header-widget">
-                {/* Messages */}
-                <div className="header-notifications user-menu">
-                  <div className="header-notifications-trigger">
-                    <a href="#"><div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" /></div></a>
-                  </div>
-                  {/* Dropdown */}
-                  <div className="header-notifications-dropdown">
-                    {/* User Status */}
-                    <div className="user-status">
-                      {/* User Name / Avatar */}
-                      <div className="user-details">
-                        <div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg"  /></div>
-                        <div className="user-name">
-                          Tom Smith <span>Freelancer</span>
-                        </div>
-                      </div>
-                      {/* User Status Switcher */}
-                      <div className="status-switch" id="snackbar-user-status">
-                        <label className="user-online current-status">Online</label>
-                        <label className="user-invisible">Invisible</label>
-                        {/* Status Indicator */}
-                        <span className="status-indicator" aria-hidden="true" />
-                      </div>	
-                    </div>
-                    <ul className="user-menu-small-nav">
-                      <li><a href="dashboard.html"><i className="icon-material-outline-dashboard" /> Dashboard</a></li>
-                      <li><a href="dashboard-settings.html"><i className="icon-material-outline-settings" /> Settings</a></li>
-                      <li><a href="index-logged-out.html"><i className="icon-material-outline-power-settings-new" /> Logout</a></li>
-                    </ul>
-                  </div>
-                </div>
+              
+              
+                {/*  agregar el componente */}
+                <HeaderNavImg/>
+                
               </div>
               {/* User Menu / End */}
               {/* Mobile Navigation Button */}

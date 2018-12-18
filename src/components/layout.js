@@ -7,6 +7,10 @@ import { Location } from '@reach/router'
 import Header from './header'
 
 
+
+
+//import $ from '.js/jquery-3.3.1.min'
+
 import './css/style.css'
 import './css/colors/green.css'
 
@@ -45,8 +49,6 @@ const Layout = ({ children }) => (
 
           <Location>
             {({ location }) => {
-
-
               return <IsIndex isIndx={location.pathname === '/'} />
             }}
           </Location>
@@ -55,29 +57,14 @@ const Layout = ({ children }) => (
 
         {children}
             
-        
+             
 
-
-        <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
-        <script type="text/javascript" src="./assets/js/viewportchecker.js"></script>
-        <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="./assets/js/bootsnav.js"></script>
-        <script type="text/javascript" src="./assets/js/select2.min.js"></script>
-        <script type="text/javascript" src="./assets/js/wysihtml5-0.3.0.js"></script>
-        <script type="text/javascript" src="./assets/js/bootstrap-wysihtml5.js"></script>
-        <script type="text/javascript" src="./assets/js/datedropper.min.js"></script>
-        <script type="text/javascript" src="./assets/js/dropzone.js"></script>
-        <script type="text/javascript" src="./assets/js/loader.js"></script>
-        <script type="text/javascript" src="./assets/js/owl.carousel.min.js"></script>
-        <script type="text/javascript" src="./assets/js/slick.min.js"></script>
-        <script type="text/javascript" src="./assets/js/gmap3.min.js"></script>
-
-        <script src="./assets/js/custom.js"></script>
 
 
 
 
       </>
+      
     )}
 
   />
@@ -125,7 +112,7 @@ function IsIndex(props) {
                 </div>
                 {/* Button */}
                 <div className="intro-search-button">
-                  <button className="button ripple-effect" onclick="window.location.href='jobs-list-layout-1.html'">Search</button>
+                  <button className="button ripple-effect" /*onClick="window.location.href='jobs-list-layout-1.html'"*/>Search</button>
                 </div>
               </div>
             </div>
