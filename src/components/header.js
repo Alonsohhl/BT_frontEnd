@@ -1,9 +1,11 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import $ from 'jquery'
 
 
 class HeaderNavImg extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {addClass: false}
@@ -169,7 +171,7 @@ const Header =({ siteTitle}) => (
             {/* Right Side Content / End */}
             <div className="right-side">
               {/*  User Notifications */}
-              <div className="header-widget ">
+              <div className="header-widget hide-on-mobile">
                 {/* Notifications */}
                 <div className="header-notifications">
                   {/* Trigger */}

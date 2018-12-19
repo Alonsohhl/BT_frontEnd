@@ -803,12 +803,14 @@
       "resolve": "C:/Sites/BT_frontEnd",
       "id": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
       "name": "default-site-plugin",
-      "version": "84bc99a684cf6dc67f2d6f15dd9e28bf",
+      "version": "5fd8f520dd4599c6f304472d1425a7d5",
       "pluginOptions": {
         "plugins": []
       },
       "nodeAPIs": [],
-      "browserAPIs": [],
+      "browserAPIs": [
+        "onInitialClientRender"
+      ],
       "ssrAPIs": [],
       "pluginFilepath": "C:/Sites/BT_frontEnd",
       "packageJson": {
@@ -899,7 +901,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "93721ce30ad95d792001743d9f29c57c",
+        "contentDigest": "c2bc25dcfc1f9f2026d7098a31f51fa7",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -1015,12 +1017,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-12-18T22:03:57.379Z",
+      "buildTime": "2018-12-19T14:42:12.112Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "be9d1cb608b14a04e5ad9abc45c6bbd1",
+        "contentDigest": "2ee5497ad886f5f0e29162b9fccea4ed",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1300,7 +1302,7 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "b34767f0990b3bfb925171b9a25c1295"
+    "PLUGINS_HASH": "be7209f023469f97d7df386ce611641e"
   },
   "componentDataDependencies": {
     "nodes": {

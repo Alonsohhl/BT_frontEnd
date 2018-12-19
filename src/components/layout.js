@@ -13,6 +13,77 @@ import Header from './header'
 
 import './css/style.css'
 import './css/colors/green.css'
+import $ from 'jquery'
+
+
+class Custitom2 extends React.Component {
+
+
+componentDidMount(){
+  
+
+  
+
+  /*----------------------------------------------------*/
+	/*  Notifications Boxes
+	/*----------------------------------------------------*/
+	$("a.close").removeAttr("href").on('click', function(){
+		function slideFade(elem) {
+			var fadeOut = { opacity: 0, transition: 'opacity 0.5s' };
+			elem.css(fadeOut).slideUp();
+		}
+		slideFade($(this).parent());
+	});
+
+  /*--------------------------------------------------*/
+	/*  Notification Dropdowns
+	/*--------------------------------------------------*/
+	$(".header-notifications").each(function() {
+		var userMenu = $(this);
+		var userMenuTrigger = $(this).find('.header-notifications-trigger a');
+
+		$(userMenuTrigger).on('click', function(event) {
+			event.preventDefault();
+
+			if ( $(this).closest(".header-notifications").is(".active") ) {
+	            close_user_dropdown();
+	        } else {
+	            close_user_dropdown();
+	            userMenu.addClass('active');
+	        }
+		});
+	});
+
+
+
+  // Closing function
+  function close_user_dropdown() {
+		$('.header-notifications').removeClass("active");
+    }
+
+  // Closes notification dropdown on click outside the conatainer
+	var mouse_is_inside = false;
+
+	$( ".header-notifications" ).on( "mouseenter", function() {
+	  mouse_is_inside=true;
+	});
+	$( ".header-notifications" ).on( "mouseleave", function() {
+	  mouse_is_inside=false;
+  });
+  
+  $("body").mouseup(function(){
+    if(! mouse_is_inside) close_user_dropdown();
+});
+
+}
+
+render(){
+  return <div/>;
+  
+  
+}
+
+}
 
 
 
@@ -28,6 +99,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
+      
       <>
         <Helmet
 
@@ -57,11 +129,12 @@ const Layout = ({ children }) => (
 
         {children}
             
+            
              
 
 
 
-
+              <Custitom2/>
 
       </>
       
