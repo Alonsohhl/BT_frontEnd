@@ -828,6 +828,10 @@
             "version": "^4.1.3"
           },
           {
+            "name": "clipboard",
+            "version": "^2.0.4"
+          },
+          {
             "name": "gatsby",
             "version": "^2.0.53"
           },
@@ -886,6 +890,10 @@
           {
             "name": "react-helmet",
             "version": "^5.2.0"
+          },
+          {
+            "name": "typpy",
+            "version": "^2.3.10"
           }
         ],
         "devDependencies": [
@@ -1017,12 +1025,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-12-19T14:42:12.112Z",
+      "buildTime": "2018-12-21T14:19:45.731Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "2ee5497ad886f5f0e29162b9fccea4ed",
+        "contentDigest": "05f76a0e8a0cf054aa092d0171b6c092",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1302,18 +1310,18 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "be7209f023469f97d7df386ce611641e"
+    "PLUGINS_HASH": "2c9e217560952267eac588d4e7f8d627"
   },
   "componentDataDependencies": {
     "nodes": {
-      "Site": [
-        "sq--src-components-layout-js"
-      ],
       "ae7b63e1-f3c5-5189-af77-91acab71ba15": [
         "sq--src-components-image-js"
       ],
       "288cbcac-e39b-5be4-9740-03b0e14df175": [
         "sq--src-components-image-js"
+      ],
+      "Site": [
+        "sq--src-components-layout-js"
       ]
     },
     "connections": {}
