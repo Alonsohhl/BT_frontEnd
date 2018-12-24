@@ -13,6 +13,8 @@ import Footer from '../components/footer'
 
 const IndexPage = () => (
   <Layout>
+
+<div className="clearfix" />
 <Featured_jobs/>
   
 

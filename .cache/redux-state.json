@@ -4,24 +4,24 @@
       "jsonName": "dev-404-page-5f9",
       "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
-      "component": "C:/Sites/BT_frontEnd/.cache/dev-404-page.js",
+      "component": "E:/Sites/BT3/.cache/dev-404-page.js",
       "componentChunkName": "component---cache-dev-404-page-js",
       "context": {},
       "pluginCreator___NODE": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
       "pluginCreatorId": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
-      "componentPath": "C:/Sites/BT_frontEnd/.cache/dev-404-page.js",
+      "componentPath": "E:/Sites/BT3/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "0aff80b7c9bd480ad44aeef720e78904",
+        "contentDigest": "fbb3c115cdb2a96ec06e4d03eb9cb22d",
         "description": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
         "owner": "internal-data-bridge"
       }
     },
     "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5": {
-      "resolve": "C:/Sites/BT_frontEnd/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "resolve": "E:/Sites/BT3/node_modules/gatsby/dist/internal-plugins/dev-404-page",
       "id": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
       "name": "dev-404-page",
       "version": "1.0.0",
@@ -33,7 +33,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Sites/BT_frontEnd/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "pluginFilepath": "E:/Sites/BT3/node_modules/gatsby/dist/internal-plugins/dev-404-page",
       "packageJson": {
         "name": "dev-404-page",
         "description": "Internal plugin to add a 404 page in development with helpful information",
@@ -50,13 +50,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "1038c27d285ba4c03d62e871321f2008",
+        "contentDigest": "479826f7d311627e18c4b3ca12c42a7b",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "1fc32581-893a-55e8-8927-bcd667e2b700": {
-      "resolve": "C:/Sites/BT_frontEnd/node_modules/gatsby/dist/internal-plugins/load-babel-config",
+      "resolve": "E:/Sites/BT3/node_modules/gatsby/dist/internal-plugins/load-babel-config",
       "id": "1fc32581-893a-55e8-8927-bcd667e2b700",
       "name": "load-babel-config",
       "version": "1.0.0",
@@ -68,7 +68,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Sites/BT_frontEnd/node_modules/gatsby/dist/internal-plugins/load-babel-config",
+      "pluginFilepath": "E:/Sites/BT3/node_modules/gatsby/dist/internal-plugins/load-babel-config",
       "packageJson": {
         "name": "load-babel-config",
         "description": "Internal plugin that handles loading Babel configs",
@@ -85,13 +85,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "0273fa1798e3fc5b03184da0040b8970",
+        "contentDigest": "798e15271b1832bc8e3d37a6bac8aa41",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "a5079d69-ba80-53dc-82f9-0f440bd5448c": {
-      "resolve": "C:/Sites/BT_frontEnd/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "resolve": "E:/Sites/BT3/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
       "id": "a5079d69-ba80-53dc-82f9-0f440bd5448c",
       "name": "internal-data-bridge",
       "version": "1.0.0",
@@ -104,7 +104,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Sites/BT_frontEnd/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "pluginFilepath": "E:/Sites/BT3/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
       "packageJson": {
         "name": "internal-data-bridge",
         "description": "An internal Gatsby plugin which creates data nodes from internal data",
@@ -121,13 +121,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "494ff6da58277088f0241ad489975d08",
+        "contentDigest": "e300daf0f376acf7ea2148b999fc041d",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "f795702c-a3b8-5a88-88ee-5d06019d44fa": {
-      "resolve": "C:/Sites/BT_frontEnd/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "resolve": "E:/Sites/BT3/node_modules/gatsby/dist/internal-plugins/prod-404",
       "id": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
       "name": "prod-404",
       "version": "1.0.0",
@@ -139,7 +139,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Sites/BT_frontEnd/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "pluginFilepath": "E:/Sites/BT3/node_modules/gatsby/dist/internal-plugins/prod-404",
       "packageJson": {
         "name": "prod-404",
         "description": "Internal plugin to detect various flavors of 404 pages and ensure there's a 404.html path created as well to ensure compatability with static hosts",
@@ -156,13 +156,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "6243035e1a752c84dcd66007730c663c",
+        "contentDigest": "2d02df872a2792557b0c20c599ea1590",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "84dad27f-1d44-51fc-ac56-4db2e5222995": {
-      "resolve": "C:/Sites/BT_frontEnd/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "resolve": "E:/Sites/BT3/node_modules/gatsby/dist/internal-plugins/query-runner",
       "id": "84dad27f-1d44-51fc-ac56-4db2e5222995",
       "name": "query-runner",
       "version": "1.0.0",
@@ -174,7 +174,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Sites/BT_frontEnd/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "pluginFilepath": "E:/Sites/BT3/node_modules/gatsby/dist/internal-plugins/query-runner",
       "packageJson": {
         "name": "query-runner",
         "description": "Internal plugin for running queries",
@@ -191,13 +191,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "59f943e03fb1dfc0c857c93b98ea6029",
+        "contentDigest": "e03c2a659e27d6ac141bd6ffe92c52c8",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "d8f4bf2b-73c7-5c69-93d1-79ac2ac7c2e8": {
-      "resolve": "C:/Sites/BT_frontEnd/node_modules/gatsby-plugin-sass",
+      "resolve": "E:/Sites/BT3/node_modules/gatsby-plugin-sass",
       "id": "d8f4bf2b-73c7-5c69-93d1-79ac2ac7c2e8",
       "name": "gatsby-plugin-sass",
       "version": "2.0.5",
@@ -209,7 +209,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Sites/BT_frontEnd/node_modules/gatsby-plugin-sass",
+      "pluginFilepath": "E:/Sites/BT3/node_modules/gatsby-plugin-sass",
       "packageJson": {
         "name": "gatsby-plugin-sass",
         "description": "Gatsby plugin to handle scss/sass files",
@@ -270,13 +270,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "9e0521edfe74fcc60ade7cbc1c571434",
+        "contentDigest": "1c579568bb47842cc9ae31c30cc5ff86",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "1943ff2f-9c0c-558d-8d0c-006603e8106a": {
-      "resolve": "C:/Sites/BT_frontEnd/node_modules/gatsby-plugin-react-helmet",
+      "resolve": "E:/Sites/BT3/node_modules/gatsby-plugin-react-helmet",
       "id": "1943ff2f-9c0c-558d-8d0c-006603e8106a",
       "name": "gatsby-plugin-react-helmet",
       "version": "3.0.2",
@@ -288,7 +288,7 @@
       "ssrAPIs": [
         "onRenderBody"
       ],
-      "pluginFilepath": "C:/Sites/BT_frontEnd/node_modules/gatsby-plugin-react-helmet",
+      "pluginFilepath": "E:/Sites/BT3/node_modules/gatsby-plugin-react-helmet",
       "packageJson": {
         "name": "gatsby-plugin-react-helmet",
         "description": "Manage document head data with react-helmet. Provides drop-in server rendering support for Gatsby.",
@@ -355,20 +355,20 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "9bae245390ef284645b7a1b40a1226d6",
+        "contentDigest": "b9ec81e87b40201af7f4c6d36756f399",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
-    "111771ce-8286-55e3-9d77-20e5c6b97b41": {
-      "resolve": "C:/Sites/BT_frontEnd/node_modules/gatsby-source-filesystem",
-      "id": "111771ce-8286-55e3-9d77-20e5c6b97b41",
+    "0ca3f3ee-ef1e-5530-ad9b-dc1b706f908a": {
+      "resolve": "E:/Sites/BT3/node_modules/gatsby-source-filesystem",
+      "id": "0ca3f3ee-ef1e-5530-ad9b-dc1b706f908a",
       "name": "gatsby-source-filesystem",
       "version": "2.0.8",
       "pluginOptions": {
         "plugins": [],
         "name": "images",
-        "path": "C:\\Sites\\BT_frontEnd/src/images"
+        "path": "E:\\Sites\\BT3/src/images"
       },
       "nodeAPIs": [
         "sourceNodes",
@@ -376,7 +376,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Sites/BT_frontEnd/node_modules/gatsby-source-filesystem",
+      "pluginFilepath": "E:/Sites/BT3/node_modules/gatsby-source-filesystem",
       "packageJson": {
         "name": "gatsby-source-filesystem",
         "description": "Gatsby plugin which parses files within a directory for further parsing by other plugins",
@@ -478,13 +478,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "4afb11305ea6545d888212218beef2f6",
+        "contentDigest": "1d826efbaf7b57adcb46a806b797df3b",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "da3d06eb-685e-5c77-ae1d-750eb6a2e4a9": {
-      "resolve": "C:/Sites/BT_frontEnd/node_modules/gatsby-transformer-sharp",
+      "resolve": "E:/Sites/BT3/node_modules/gatsby-transformer-sharp",
       "id": "da3d06eb-685e-5c77-ae1d-750eb6a2e4a9",
       "name": "gatsby-transformer-sharp",
       "version": "2.1.8",
@@ -498,7 +498,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Sites/BT_frontEnd/node_modules/gatsby-transformer-sharp",
+      "pluginFilepath": "E:/Sites/BT3/node_modules/gatsby-transformer-sharp",
       "packageJson": {
         "name": "gatsby-transformer-sharp",
         "description": "Gatsby transformer plugin for images using Sharp",
@@ -574,13 +574,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "c2c65ea2b5c92aca460bdc6c7885b645",
+        "contentDigest": "b229eac274876249c94cae501b8117b4",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "84d6154d-4241-556c-a679-cc8339cac100": {
-      "resolve": "C:/Sites/BT_frontEnd/node_modules/gatsby-plugin-sharp",
+      "resolve": "E:/Sites/BT3/node_modules/gatsby-plugin-sharp",
       "id": "84d6154d-4241-556c-a679-cc8339cac100",
       "name": "gatsby-plugin-sharp",
       "version": "2.0.12",
@@ -590,7 +590,7 @@
       "nodeAPIs": [],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Sites/BT_frontEnd/node_modules/gatsby-plugin-sharp",
+      "pluginFilepath": "E:/Sites/BT3/node_modules/gatsby-plugin-sharp",
       "packageJson": {
         "name": "gatsby-plugin-sharp",
         "description": "Wrapper of the Sharp image manipulation library for Gatsby plugins",
@@ -703,13 +703,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "6bde6caf3793070c93f2895deddc0f13",
+        "contentDigest": "14f751bdbb85849a26a2160326b02967",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "112c12f8-b222-509b-abe0-dfe93a905df9": {
-      "resolve": "C:/Sites/BT_frontEnd/node_modules/gatsby-plugin-manifest",
+      "resolve": "E:/Sites/BT3/node_modules/gatsby-plugin-manifest",
       "id": "112c12f8-b222-509b-abe0-dfe93a905df9",
       "name": "gatsby-plugin-manifest",
       "version": "2.0.9",
@@ -730,7 +730,7 @@
       "ssrAPIs": [
         "onRenderBody"
       ],
-      "pluginFilepath": "C:/Sites/BT_frontEnd/node_modules/gatsby-plugin-manifest",
+      "pluginFilepath": "E:/Sites/BT3/node_modules/gatsby-plugin-manifest",
       "packageJson": {
         "name": "gatsby-plugin-manifest",
         "description": "Gatsby plugin which adds a manifest.webmanifest to make sites progressive web apps",
@@ -794,13 +794,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "e4a2a0b41356b2fc1ac3ef89daf4c765",
+        "contentDigest": "5d22211484d3d94f9e0a811fd8ae63e5",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "7374ebf2-d961-52ee-92a2-c25e7cb387a9": {
-      "resolve": "C:/Sites/BT_frontEnd",
+      "resolve": "E:/Sites/BT3",
       "id": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
       "name": "default-site-plugin",
       "version": "5fd8f520dd4599c6f304472d1425a7d5",
@@ -812,7 +812,7 @@
         "onInitialClientRender"
       ],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Sites/BT_frontEnd",
+      "pluginFilepath": "E:/Sites/BT3",
       "packageJson": {
         "name": "gatsby-starter-default",
         "description": "Gatsby default starter",
@@ -872,6 +872,10 @@
             "version": "^3.3.1"
           },
           {
+            "name": "jquery.mmenu",
+            "version": "^7.2.2"
+          },
+          {
             "name": "node-sass",
             "version": "^4.10.0"
           },
@@ -892,6 +896,10 @@
             "version": "^5.2.0"
           },
           {
+            "name": "react-redux",
+            "version": "^6.0.0"
+          },
+          {
             "name": "typpy",
             "version": "^2.3.10"
           }
@@ -909,19 +917,19 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "c2bc25dcfc1f9f2026d7098a31f51fa7",
+        "contentDigest": "8e14a7e4b0208439fdeffe5f9302f018",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
-    "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3": {
-      "resolve": "C:/Sites/BT_frontEnd/node_modules/gatsby-plugin-page-creator",
-      "id": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
+    "870508fb-80c1-584b-9c8a-28d9ee967cf4": {
+      "resolve": "E:/Sites/BT3/node_modules/gatsby-plugin-page-creator",
+      "id": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
       "name": "gatsby-plugin-page-creator",
       "version": "2.0.4",
       "pluginOptions": {
         "plugins": [],
-        "path": "C:/Sites/BT_frontEnd/src/pages",
+        "path": "E:/Sites/BT3/src/pages",
         "pathCheck": false
       },
       "nodeAPIs": [
@@ -929,7 +937,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "C:/Sites/BT_frontEnd/node_modules/gatsby-plugin-page-creator",
+      "pluginFilepath": "E:/Sites/BT3/node_modules/gatsby-plugin-page-creator",
       "packageJson": {
         "name": "gatsby-plugin-page-creator",
         "description": "Gatsby plugin that automatically creates pages from React components in specified directories",
@@ -1012,7 +1020,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "14fdae4224cf193eb30c2e61f5ee2f52",
+        "contentDigest": "266c76e519378a87ba12d4f9f6df6213",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -1025,62 +1033,62 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-12-21T14:19:45.731Z",
+      "buildTime": "2018-12-24T00:13:23.112Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "05f76a0e8a0cf054aa092d0171b6c092",
+        "contentDigest": "269bf95da2e150d1f05d7e69257777e6",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
     },
-    "e863b8b0-a77d-5bc7-9102-3e3964444601": {
-      "id": "e863b8b0-a77d-5bc7-9102-3e3964444601",
+    "24d5223c-a426-53a6-a818-a0a48c8f5e2b": {
+      "id": "24d5223c-a426-53a6-a818-a0a48c8f5e2b",
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "e4b5836448c8f86d53c67466eb34c024",
+        "contentDigest": "99bc5366642d533f34ad6fb4c1afc936",
         "type": "Directory",
         "description": "Directory \"src\\images\"",
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "images",
-      "absolutePath": "C:/Sites/BT_frontEnd/src/images",
+      "absolutePath": "E:/Sites/BT3/src/images",
       "relativePath": "",
       "extension": "",
       "size": 0,
       "prettySize": "0 B",
-      "modifiedTime": "2018-12-17T12:31:03.724Z",
-      "accessTime": "2018-12-17T12:31:03.724Z",
-      "changeTime": "2018-12-17T12:31:03.724Z",
-      "birthTime": "2018-12-03T12:49:34.695Z",
-      "root": "C:/",
-      "dir": "C:/Sites/BT_frontEnd/src",
+      "modifiedTime": "2018-12-22T03:37:28.457Z",
+      "accessTime": "2018-12-22T03:37:28.457Z",
+      "changeTime": "2018-12-22T03:37:28.457Z",
+      "birthTime": "2018-12-22T03:37:28.455Z",
+      "root": "E:/",
+      "dir": "E:/Sites/BT3/src",
       "base": "images",
       "ext": "",
       "name": "images",
       "relativeDirectory": "..",
-      "dev": 1760914996,
+      "dev": 844055037,
       "mode": 16822,
       "nlink": 1,
       "uid": 0,
       "gid": 0,
       "rdev": 0,
-      "ino": 18577348463228856,
-      "atimeMs": 1545049863723.739,
-      "mtimeMs": 1545049863723.739,
-      "ctimeMs": 1545049863723.739,
-      "birthtimeMs": 1543841374694.756,
-      "atime": "2018-12-17T12:31:03.724Z",
-      "mtime": "2018-12-17T12:31:03.724Z",
-      "ctime": "2018-12-17T12:31:03.724Z",
-      "birthtime": "2018-12-03T12:49:34.695Z"
+      "ino": 1407374883708166,
+      "atimeMs": 1545449848456.6743,
+      "mtimeMs": 1545449848456.6743,
+      "ctimeMs": 1545449848456.6743,
+      "birthtimeMs": 1545449848454.675,
+      "atime": "2018-12-22T03:37:28.457Z",
+      "mtime": "2018-12-22T03:37:28.457Z",
+      "ctime": "2018-12-22T03:37:28.457Z",
+      "birthtime": "2018-12-22T03:37:28.455Z"
     },
-    "65377c2e-3516-575d-8876-76878444414e": {
-      "id": "65377c2e-3516-575d-8876-76878444414e",
+    "0d0e2676-4a4b-5ae6-b051-066f73c2647d": {
+      "id": "0d0e2676-4a4b-5ae6-b051-066f73c2647d",
       "children": [
-        "5f81f806-e615-5c77-a904-9eb2a6c9bcdf"
+        "fc901f8f-a8c0-5f5a-9783-e2bd8b8b4193"
       ],
       "parent": "___SOURCE___",
       "internal": {
@@ -1091,51 +1099,51 @@
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "images",
-      "absolutePath": "C:/Sites/BT_frontEnd/src/images/gatsby-icon.png",
+      "absolutePath": "E:/Sites/BT3/src/images/gatsby-icon.png",
       "relativePath": "gatsby-icon.png",
       "extension": "png",
       "size": 21212,
       "prettySize": "21.2 kB",
-      "modifiedTime": "2018-12-03T12:49:34.705Z",
-      "accessTime": "2018-12-03T12:49:34.705Z",
-      "changeTime": "2018-12-03T12:49:34.705Z",
-      "birthTime": "2018-12-03T12:49:34.705Z",
-      "root": "C:/",
-      "dir": "C:/Sites/BT_frontEnd/src/images",
+      "modifiedTime": "2018-12-22T03:37:28.457Z",
+      "accessTime": "2018-12-22T03:37:28.457Z",
+      "changeTime": "2018-12-22T03:37:28.457Z",
+      "birthTime": "2018-12-22T03:37:28.457Z",
+      "root": "E:/",
+      "dir": "E:/Sites/BT3/src/images",
       "base": "gatsby-icon.png",
       "ext": ".png",
       "name": "gatsby-icon",
       "relativeDirectory": "",
-      "dev": 1760914996,
+      "dev": 844055037,
       "mode": 33206,
       "nlink": 1,
       "uid": 0,
       "gid": 0,
       "rdev": 0,
-      "ino": 36873221949421500,
-      "atimeMs": 1543841374704.7864,
-      "mtimeMs": 1543841374704.7864,
-      "ctimeMs": 1543841374704.7864,
-      "birthtimeMs": 1543841374704.7864,
-      "atime": "2018-12-03T12:49:34.705Z",
-      "mtime": "2018-12-03T12:49:34.705Z",
-      "ctime": "2018-12-03T12:49:34.705Z",
-      "birthtime": "2018-12-03T12:49:34.705Z"
+      "ino": 1407374883708168,
+      "atimeMs": 1545449848456.6743,
+      "mtimeMs": 1545449848456.6743,
+      "ctimeMs": 1545449848456.6743,
+      "birthtimeMs": 1545449848456.6743,
+      "atime": "2018-12-22T03:37:28.457Z",
+      "mtime": "2018-12-22T03:37:28.457Z",
+      "ctime": "2018-12-22T03:37:28.457Z",
+      "birthtime": "2018-12-22T03:37:28.457Z"
     },
-    "5f81f806-e615-5c77-a904-9eb2a6c9bcdf": {
-      "id": "5f81f806-e615-5c77-a904-9eb2a6c9bcdf",
+    "fc901f8f-a8c0-5f5a-9783-e2bd8b8b4193": {
+      "id": "fc901f8f-a8c0-5f5a-9783-e2bd8b8b4193",
       "children": [],
-      "parent": "65377c2e-3516-575d-8876-76878444414e",
+      "parent": "0d0e2676-4a4b-5ae6-b051-066f73c2647d",
       "internal": {
         "contentDigest": "4a9773549091c227cd2eb82ccd9c5e3a",
         "type": "ImageSharp",
         "owner": "gatsby-transformer-sharp"
       }
     },
-    "ae7b63e1-f3c5-5189-af77-91acab71ba15": {
-      "id": "ae7b63e1-f3c5-5189-af77-91acab71ba15",
+    "49037d11-56e4-5dcd-9751-0b8c7a585a41": {
+      "id": "49037d11-56e4-5dcd-9751-0b8c7a585a41",
       "children": [
-        "288cbcac-e39b-5be4-9740-03b0e14df175"
+        "4ee6c7b7-a061-5738-a285-0edf9be0fcd1"
       ],
       "parent": "___SOURCE___",
       "internal": {
@@ -1146,41 +1154,41 @@
         "owner": "gatsby-source-filesystem"
       },
       "sourceInstanceName": "images",
-      "absolutePath": "C:/Sites/BT_frontEnd/src/images/gatsby-astronaut.png",
+      "absolutePath": "E:/Sites/BT3/src/images/gatsby-astronaut.png",
       "relativePath": "gatsby-astronaut.png",
       "extension": "png",
       "size": 167273,
       "prettySize": "167 kB",
-      "modifiedTime": "2018-12-03T12:49:34.700Z",
-      "accessTime": "2018-12-03T12:49:34.700Z",
-      "changeTime": "2018-12-03T12:49:34.700Z",
-      "birthTime": "2018-12-03T12:49:34.700Z",
-      "root": "C:/",
-      "dir": "C:/Sites/BT_frontEnd/src/images",
+      "modifiedTime": "2018-12-22T03:37:28.456Z",
+      "accessTime": "2018-12-22T03:37:28.456Z",
+      "changeTime": "2018-12-22T03:37:28.456Z",
+      "birthTime": "2018-12-22T03:37:28.456Z",
+      "root": "E:/",
+      "dir": "E:/Sites/BT3/src/images",
       "base": "gatsby-astronaut.png",
       "ext": ".png",
       "name": "gatsby-astronaut",
       "relativeDirectory": "",
-      "dev": 1760914996,
+      "dev": 844055037,
       "mode": 33206,
       "nlink": 1,
       "uid": 0,
       "gid": 0,
       "rdev": 0,
-      "ino": 21955048183756732,
-      "atimeMs": 1543841374699.7688,
-      "mtimeMs": 1543841374700.2754,
-      "ctimeMs": 1543841374700.2754,
-      "birthtimeMs": 1543841374699.7688,
-      "atime": "2018-12-03T12:49:34.700Z",
-      "mtime": "2018-12-03T12:49:34.700Z",
-      "ctime": "2018-12-03T12:49:34.700Z",
-      "birthtime": "2018-12-03T12:49:34.700Z"
+      "ino": 1407374883708167,
+      "atimeMs": 1545449848455.6853,
+      "mtimeMs": 1545449848456.184,
+      "ctimeMs": 1545449848456.184,
+      "birthtimeMs": 1545449848455.6853,
+      "atime": "2018-12-22T03:37:28.456Z",
+      "mtime": "2018-12-22T03:37:28.456Z",
+      "ctime": "2018-12-22T03:37:28.456Z",
+      "birthtime": "2018-12-22T03:37:28.456Z"
     },
-    "288cbcac-e39b-5be4-9740-03b0e14df175": {
-      "id": "288cbcac-e39b-5be4-9740-03b0e14df175",
+    "4ee6c7b7-a061-5738-a285-0edf9be0fcd1": {
+      "id": "4ee6c7b7-a061-5738-a285-0edf9be0fcd1",
       "children": [],
-      "parent": "ae7b63e1-f3c5-5189-af77-91acab71ba15",
+      "parent": "49037d11-56e4-5dcd-9751-0b8c7a585a41",
       "internal": {
         "contentDigest": "6d91c86c0fde632ba4cd01062fd9ccfa",
         "type": "ImageSharp",
@@ -1191,19 +1199,19 @@
       "jsonName": "404-22d",
       "internalComponentName": "Component404",
       "path": "/404/",
-      "component": "C:/Sites/BT_frontEnd/src/pages/404.js",
+      "component": "E:/Sites/BT3/src/pages/404.js",
       "componentChunkName": "component---src-pages-404-js",
       "context": {},
-      "pluginCreator___NODE": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
-      "pluginCreatorId": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
-      "componentPath": "C:/Sites/BT_frontEnd/src/pages/404.js",
+      "pluginCreator___NODE": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "pluginCreatorId": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "componentPath": "E:/Sites/BT3/src/pages/404.js",
       "id": "SitePage /404/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "0d04c7f8af622993b2c794e9163095b5",
-        "description": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
+        "contentDigest": "aa2ca0e160a0ca406bd18bfcb17b1b15",
+        "description": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
         "owner": "internal-data-bridge"
       }
     },
@@ -1211,19 +1219,39 @@
       "jsonName": "index",
       "internalComponentName": "ComponentIndex",
       "path": "/",
-      "component": "C:/Sites/BT_frontEnd/src/pages/index.js",
+      "component": "E:/Sites/BT3/src/pages/index.js",
       "componentChunkName": "component---src-pages-index-js",
       "context": {},
-      "pluginCreator___NODE": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
-      "pluginCreatorId": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
-      "componentPath": "C:/Sites/BT_frontEnd/src/pages/index.js",
+      "pluginCreator___NODE": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "pluginCreatorId": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "componentPath": "E:/Sites/BT3/src/pages/index.js",
       "id": "SitePage /",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "e1392bfae351a368d7da787e9064e0f6",
-        "description": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
+        "contentDigest": "a22c85a32a0cd1fb8b7171f057a9e0e3",
+        "description": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /login/": {
+      "jsonName": "login-557",
+      "internalComponentName": "ComponentLogin",
+      "path": "/login/",
+      "component": "E:/Sites/BT3/src/pages/login.js",
+      "componentChunkName": "component---src-pages-login-js",
+      "context": {},
+      "pluginCreator___NODE": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "pluginCreatorId": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "componentPath": "E:/Sites/BT3/src/pages/login.js",
+      "id": "SitePage /login/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "a396df133bbf51995e5bf7d39b190505",
+        "description": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
         "owner": "internal-data-bridge"
       }
     },
@@ -1231,19 +1259,19 @@
       "jsonName": "page-2-fbc",
       "internalComponentName": "ComponentPage2",
       "path": "/page-2/",
-      "component": "C:/Sites/BT_frontEnd/src/pages/page-2.js",
+      "component": "E:/Sites/BT3/src/pages/page-2.js",
       "componentChunkName": "component---src-pages-page-2-js",
       "context": {},
-      "pluginCreator___NODE": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
-      "pluginCreatorId": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
-      "componentPath": "C:/Sites/BT_frontEnd/src/pages/page-2.js",
+      "pluginCreator___NODE": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "pluginCreatorId": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "componentPath": "E:/Sites/BT3/src/pages/page-2.js",
       "id": "SitePage /page-2/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "1c0463b33f40c220a183de2aecfe87c8",
-        "description": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
+        "contentDigest": "0d8738dff62f6cb8b04ae786749c575b",
+        "description": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
         "owner": "internal-data-bridge"
       }
     },
@@ -1251,19 +1279,19 @@
       "jsonName": "page-3-74c",
       "internalComponentName": "ComponentPage3",
       "path": "/page-3/",
-      "component": "C:/Sites/BT_frontEnd/src/pages/page-3.js",
+      "component": "E:/Sites/BT3/src/pages/page-3.js",
       "componentChunkName": "component---src-pages-page-3-js",
       "context": {},
-      "pluginCreator___NODE": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
-      "pluginCreatorId": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
-      "componentPath": "C:/Sites/BT_frontEnd/src/pages/page-3.js",
+      "pluginCreator___NODE": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "pluginCreatorId": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "componentPath": "E:/Sites/BT3/src/pages/page-3.js",
       "id": "SitePage /page-3/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "1752dfa183d6a0c24deee80c00d7657a",
-        "description": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
+        "contentDigest": "a386211741e2ad96e7583932f5fa325d",
+        "description": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
         "owner": "internal-data-bridge"
       }
     },
@@ -1271,19 +1299,19 @@
       "jsonName": "page-4-9ee",
       "internalComponentName": "ComponentPage4",
       "path": "/page-4/",
-      "component": "C:/Sites/BT_frontEnd/src/pages/page-4.js",
+      "component": "E:/Sites/BT3/src/pages/page-4.js",
       "componentChunkName": "component---src-pages-page-4-js",
       "context": {},
-      "pluginCreator___NODE": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
-      "pluginCreatorId": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
-      "componentPath": "C:/Sites/BT_frontEnd/src/pages/page-4.js",
+      "pluginCreator___NODE": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "pluginCreatorId": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "componentPath": "E:/Sites/BT3/src/pages/page-4.js",
       "id": "SitePage /page-4/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "51d40baa57de8815145b40af4c37591e",
-        "description": "a5f68f46-6ce1-50f3-99f3-17b28fa1a9d3",
+        "contentDigest": "760a5d36245301cce7b6533e0cfe258a",
+        "description": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
         "owner": "internal-data-bridge"
       }
     },
@@ -1291,18 +1319,18 @@
       "jsonName": "404-html-516",
       "internalComponentName": "Component404Html",
       "path": "/404.html",
-      "component": "C:/Sites/BT_frontEnd/src/pages/404.js",
+      "component": "E:/Sites/BT3/src/pages/404.js",
       "componentChunkName": "component---src-pages-404-js",
       "context": {},
       "pluginCreator___NODE": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
       "pluginCreatorId": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
-      "componentPath": "C:/Sites/BT_frontEnd/src/pages/404.js",
+      "componentPath": "E:/Sites/BT3/src/pages/404.js",
       "id": "SitePage /404.html",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "eff5e8ced4dd722548bd93d3e57cbd56",
+        "contentDigest": "f90f7ada77a0857defd4b661c8889414",
         "description": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
         "owner": "internal-data-bridge"
       }
@@ -1310,75 +1338,80 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "2c9e217560952267eac588d4e7f8d627"
+    "PLUGINS_HASH": "b006fff25231f3c8cec6d00f9c3817bf"
   },
   "componentDataDependencies": {
     "nodes": {
-      "ae7b63e1-f3c5-5189-af77-91acab71ba15": [
-        "sq--src-components-image-js"
-      ],
-      "288cbcac-e39b-5be4-9740-03b0e14df175": [
-        "sq--src-components-image-js"
-      ],
       "Site": [
         "sq--src-components-layout-js"
+      ],
+      "49037d11-56e4-5dcd-9751-0b8c7a585a41": [
+        "sq--src-components-image-js"
+      ],
+      "4ee6c7b7-a061-5738-a285-0edf9be0fcd1": [
+        "sq--src-components-image-js"
       ]
     },
     "connections": {}
   },
   "jsonDataPaths": {
     "sq--src-components-layout-js": 755544856,
-    "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
     "404-22d": "44/path---404-22-d-bce-NZuapzHg3X9TaN1iIixfv1W23E",
+    "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
     "page-2-fbc": "53/path---page-2-fbc-5a8-NZuapzHg3X9TaN1iIixfv1W23E",
     "page-3-74c": "56/path---page-3-74-c-e74-NZuapzHg3X9TaN1iIixfv1W23E",
+    "page-4-9ee": "225/path---page-4-9-ee-4e3-NZuapzHg3X9TaN1iIixfv1W23E",
     "404-html-516": "164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E",
     "sq--src-components-image-js": 2011440971,
-    "page-4-9ee": "225/path---page-4-9-ee-4e3-NZuapzHg3X9TaN1iIixfv1W23E"
+    "login-557": "624/path---login-557-29c-NZuapzHg3X9TaN1iIixfv1W23E"
   },
   "components": {
-    "C:/Sites/BT_frontEnd/.cache/dev-404-page.js": {
+    "E:/Sites/BT3/.cache/dev-404-page.js": {
       "query": "",
-      "componentPath": "C:/Sites/BT_frontEnd/.cache/dev-404-page.js"
+      "componentPath": "E:/Sites/BT3/.cache/dev-404-page.js"
     },
-    "C:/Sites/BT_frontEnd/src/pages/404.js": {
+    "E:/Sites/BT3/src/pages/404.js": {
       "query": "",
-      "componentPath": "C:/Sites/BT_frontEnd/src/pages/404.js"
+      "componentPath": "E:/Sites/BT3/src/pages/404.js"
     },
-    "C:/Sites/BT_frontEnd/src/pages/index.js": {
+    "E:/Sites/BT3/src/pages/index.js": {
       "query": "",
-      "componentPath": "C:/Sites/BT_frontEnd/src/pages/index.js"
+      "componentPath": "E:/Sites/BT3/src/pages/index.js"
     },
-    "C:/Sites/BT_frontEnd/src/pages/page-2.js": {
+    "E:/Sites/BT3/src/pages/login.js": {
       "query": "",
-      "componentPath": "C:/Sites/BT_frontEnd/src/pages/page-2.js"
+      "componentPath": "E:/Sites/BT3/src/pages/login.js"
     },
-    "C:/Sites/BT_frontEnd/src/pages/page-3.js": {
+    "E:/Sites/BT3/src/pages/page-2.js": {
       "query": "",
-      "componentPath": "C:/Sites/BT_frontEnd/src/pages/page-3.js"
+      "componentPath": "E:/Sites/BT3/src/pages/page-2.js"
     },
-    "C:/Sites/BT_frontEnd/src/pages/page-4.js": {
+    "E:/Sites/BT3/src/pages/page-3.js": {
       "query": "",
-      "componentPath": "C:/Sites/BT_frontEnd/src/pages/page-4.js"
+      "componentPath": "E:/Sites/BT3/src/pages/page-3.js"
+    },
+    "E:/Sites/BT3/src/pages/page-4.js": {
+      "query": "",
+      "componentPath": "E:/Sites/BT3/src/pages/page-4.js"
     }
   },
   "staticQueryComponents": {
-    "sq--src-components-image-js": {
-      "name": "cSitesBtFrontEndSrcComponentsImageJs2011440971",
-      "componentPath": "C:/Sites/BT_frontEnd/src/components/image.js",
-      "id": "sq--src-components-image-js",
-      "jsonName": "sq--src-components-image-js",
-      "query": "query cSitesBtFrontEndSrcComponentsImageJs2011440971 {\n  placeholderImage: file(relativePath: {eq: \"gatsby-astronaut.png\"}) {\n    childImageSharp {\n      fluid(maxWidth: 300) {\n        ...GatsbyImageSharpFluid\n      }\n    }\n  }\n}\n\nfragment GatsbyImageSharpFluid on ImageSharpFluid {\n  base64\n  aspectRatio\n  src\n  srcSet\n  sizes\n}\n",
-      "hash": 2011440971
-    },
     "sq--src-components-layout-js": {
       "name": "SiteTitleQuery",
-      "componentPath": "C:/Sites/BT_frontEnd/src/components/layout.js",
+      "componentPath": "E:/Sites/BT3/src/components/layout.js",
       "id": "sq--src-components-layout-js",
       "jsonName": "sq--src-components-layout-js",
       "query": "query SiteTitleQuery {\n  site {\n    siteMetadata {\n      title\n    }\n  }\n}\n",
       "hash": 755544856
+    },
+    "sq--src-components-image-js": {
+      "name": "eSitesBt3SrcComponentsImageJs2011440971",
+      "componentPath": "E:/Sites/BT3/src/components/image.js",
+      "id": "sq--src-components-image-js",
+      "jsonName": "sq--src-components-image-js",
+      "query": "query eSitesBt3SrcComponentsImageJs2011440971 {\n  placeholderImage: file(relativePath: {eq: \"gatsby-astronaut.png\"}) {\n    childImageSharp {\n      fluid(maxWidth: 300) {\n        ...GatsbyImageSharpFluid\n      }\n    }\n  }\n}\n\nfragment GatsbyImageSharpFluid on ImageSharpFluid {\n  base64\n  aspectRatio\n  src\n  srcSet\n  sizes\n}\n",
+      "hash": 2011440971
     }
   }
 }

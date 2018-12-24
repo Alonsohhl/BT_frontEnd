@@ -8,7 +8,8 @@ import Header from './header'
 //import $ from 'jquery'
 import jQuery from 'jquery'
 import $ from 'jquery'//,'jquery.mmenu'
-import mmenu from 'jquery.mmenu'
+
+
 
 import ClipboardJS  from 'Clipboard'
 import tippy from 'typpy'
@@ -20,13 +21,18 @@ import './css/style.css'
 import './css/colors/green.css'
 
 
+
+require ('jquery.mmenu');
+//require ('./js/mmenu.min.js');
+
+
 class MainJS extends React.Component {
 
   
 
   componentDidMount(){
 
-    
+		
 
 /*--------------------------------------------------*/
 	/*  Mobile Menu - mmenu.js
@@ -35,11 +41,11 @@ class MainJS extends React.Component {
 		function mmenuInit() {
 			var wi = $(window).width();
 			if(wi <= '1099') {
-/*
+
 				$(".mmenu-init" ).remove();
 				$("#navigation").clone().addClass("mmenu-init").insertBefore("#navigation").removeAttr('id').removeClass('style-1 style-2')
 								.find('ul, div').removeClass('style-1 style-2 mega-menu mega-menu-content mega-menu-section').removeAttr('id');
-	/*			$(".mmenu-init").find("ul").addClass("mm-listview");
+				$(".mmenu-init").find("ul").addClass("mm-listview");
 				$(".mmenu-init").find(".mobile-styles .mm-listview").unwrap();
 
 
@@ -50,13 +56,14 @@ class MainJS extends React.Component {
 				 offCanvas: {
 				    pageNodetype: "#wrapper"
 				 }
-				});*/
+				});
 
 				var mmenuAPI = $(".mmenu-init").data( "mmenu" );
 				var $icon = $(".mmenu-trigger .hamburger");
 
 				$(".mmenu-trigger").on('click', function() {
 					mmenuAPI.open();
+					console.log(wi)
 				});
 
 			}
@@ -65,7 +72,6 @@ class MainJS extends React.Component {
 		mmenuInit();
 		$(window).resize(function() { mmenuInit(); });
 	});
-
 	/*--------------------------------------------------*/
 	/*  Sticky Header
 	/*--------------------------------------------------*/
@@ -267,6 +273,9 @@ $("a.close").removeAttr("href").on('click', function(){
 	$(document).keyup(function(e) { 
 		if (e.keyCode == 27) {
 			close_user_dropdown();
+			var mmenuAPI = $(".mmenu-init").data( "mmenu" );
+			mmenuAPI.close()
+
 		}
 	});
 
@@ -366,7 +375,6 @@ $("a.close").removeAttr("href").on('click', function(){
 /*----------------------------------------------------*/
 	/* Dashboard Scripts
 	/*----------------------------------------------------*/
-
 	// Dashboard Nav Submenus
   $('.dashboard-nav ul li a').on('click', function(e){
 		if($(this).closest("li").children("ul").length) {
@@ -1070,7 +1078,21 @@ qtySum();
         if(buttonBG !== undefined) {
         	$(this).css('background-color',buttonBG);
         }
-  });
+	});
+	
+	
+/*----------------------------------------------------*/
+	/* MIS SCRIPTS
+	/*----------------------------------------------------*/
+
+	$('#mm-1').on('click', function(e){
+
+
+		//	close_user_dropdown();
+		var mmenuAPI = $(".mmenu-init").data( "mmenu" );
+		mmenuAPI.close()
+		console.log('Cerrando Menu')
+		});
   
   
 
@@ -1111,7 +1133,7 @@ const Layout = ({ children }) => (
         </Helmet>
 
         <div className="Loader"></div>
-        <div id="wrapper" className="wrapper-with-transparent-header">
+        <div id="wrapper" className="wrapper">
           <Header siteTitle={data.site.siteMetadata.title} />
           <div className="clearfix" />
 
@@ -1161,8 +1183,8 @@ function IsIndex(props) {
           <div className="row">
             <div className="col-md-12">
               <div className="banner-headline-alt">
-                <h3>Don't Just Dream, Do</h3>
-                <span>Find the best jobs in the digital industry</span>
+                <h3>UCSM - En la excelencia académica y profesional</h3>
+                <span>Encuentra tus oportunidades</span>
               </div>
             </div>
           </div>
@@ -1170,22 +1192,22 @@ function IsIndex(props) {
           <div className="row">
             <div className="col-md-12">
               <div className="intro-banner-search-form margin-top-95">
-                {/* Search Field */}
+                {/* Search Field 
                 <div className="intro-search-field with-autocomplete">
-                  <label htmlFor="autocomplete-input" className="field-title ripple-effect">Where?</label>
+                  <label htmlFor="autocomplete-input" className="field-title ripple-effect">Donde?</label>
                   <div className="input-with-icon">
                     <input id="autocomplete-input" type="text" placeholder="Online Job" />
                     <i className="icon-material-outline-location-on" />
                   </div>
-                </div>
+                </div>*/}
                 {/* Search Field */}
                 <div className="intro-search-field">
-                  <label htmlFor="intro-keywords" className="field-title ripple-effect">What job you want?</label>
-                  <input id="intro-keywords" type="text" placeholder="Job Title or Keywords" />
+                  <label htmlFor="intro-keywords" className="field-title ripple-effect">Que tipo de trabajo estas buscando?</label>
+                  <input id="intro-keywords" type="text" placeholder="Nombre del puesto o Palabras clave" />
                 </div>
                 {/* Button */}
                 <div className="intro-search-button">
-                  <button className="button ripple-effect" /*onClick="window.location.href='jobs-list-layout-1.html'"*/>Search</button>
+                  <button className="button ripple-effect" /*onClick="window.location.href='jobs-list-layout-1.html'"*/>Buscar</button>
                 </div>
               </div>
             </div>
@@ -1196,15 +1218,15 @@ function IsIndex(props) {
               <ul className="intro-stats margin-top-45 hide-under-992px">
                 <li>
                   <strong className="counter">1,586</strong>
-                  <span>Jobs Posted</span>
+                  <span>Ofertas Publicadas</span>
                 </li>
                 <li>
                   <strong className="counter">3,543</strong>
-                  <span>Tasks Posted</span>
+                  <span>Empresas</span>
                 </li>
                 <li>
                   <strong className="counter">1,232</strong>
-                  <span>Freelancers</span>
+                  <span>Alumnos Registrados</span>
                 </li>
               </ul>
             </div>

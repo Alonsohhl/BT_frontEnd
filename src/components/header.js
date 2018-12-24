@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { connect } from 'react-redux'
 import $ from 'jquery'
 
 
@@ -59,30 +60,180 @@ class HeaderNavImg extends React.Component {
 }
 
 
+const guesLinks=(<div className="right-side" style={{marginTop: '22px', height: '70%'}}>
+<Link to="/login" className="current"> login</Link>
+</div>);
 
-const Header =({ siteTitle}) => (
-//start nav
+const userLinks=(<div className="right-side">
+{/*  User Notifications */}
+<div className="header-widget hide-on-mobile">
+  {/* Notifications */}
+  <div className="header-notifications">
+    {/* Trigger */}
+    <div className="header-notifications-trigger">
+      <a href="#"><i className="icon-feather-bell" /><span>4</span></a>
+    </div>
+    {/* Dropdown */}
+    <div className="header-notifications-dropdown">
+      <div className="header-notifications-headline">
+        <h4>Notifications</h4>
+        <button className="mark-as-read ripple-effect-dark" title="Mark all as read" data-tippy-placement="left">
+          <i className="icon-feather-check-square" />
+        </button>
+      </div>
+      <div className="header-notifications-content">
+        <div className="header-notifications-scroll" data-simplebar>
+          <ul>
+            {/* Notification */}
+            <li className="notifications-not-read">
+              <a href="dashboard-manage-candidates.html">
+                <span className="notification-icon"><i className="icon-material-outline-group" /></span>
+                <span className="notification-text">
+                  <strong>Michael Shannah</strong> applied for a job <span className="color">Full Stack Software Engineer</span>
+                </span>
+              </a>
+            </li>
+            {/* Notification */}
+            <li>
+              <a href="dashboard-manage-bidders.html">
+                <span className="notification-icon"><i className=" icon-material-outline-gavel" /></span>
+                <span className="notification-text">
+                  <strong>Gilbert Allanis</strong> placed a bid on your <span className="color">iOS App Development</span> project
+                </span>
+              </a>
+            </li>
+            {/* Notification */}
+            <li>
+              <a href="dashboard-manage-jobs.html">
+                <span className="notification-icon"><i className="icon-material-outline-autorenew" /></span>
+                <span className="notification-text">
+                  Your job listing <span className="color">Full Stack PHP Developer</span> is expiring.
+                </span>
+              </a>
+            </li>
+            {/* Notification */}
+            <li>
+              <a href="dashboard-manage-candidates.html">
+                <span className="notification-icon"><i className="icon-material-outline-group" /></span>
+                <span className="notification-text">
+                  <strong>Sindy Forrest</strong> applied for a job <span className="color">Full Stack Software Engineer</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  {/* Messages */}
+  <div className="header-notifications">
+    <div className="header-notifications-trigger">
+      <a href="#"><i className="icon-feather-mail" /><span>3</span></a>
+    </div>
+    {/* Dropdown */}
+    <div className="header-notifications-dropdown">
+      <div className="header-notifications-headline">
+        <h4>Messages</h4>
+        <button className="mark-as-read ripple-effect-dark" title="Mark all as read" data-tippy-placement="left">
+          <i className="icon-feather-check-square" />
+        </button>
+      </div>
+      <div className="header-notifications-content">
+        <div className="header-notifications-scroll" data-simplebar>
+          <ul>
+            {/* Notification */}
+            <li className="notifications-not-read">
+              <a href="dashboard-messages.html">
+                <span className="notification-avatar status-online"><img src="images/user-avatar-small-03.jpg"  /></span>
+                <div className="notification-text">
+                  <strong>David Peterson</strong>
+                  <p className="notification-msg-text">Thanks for reaching out. I'm quite busy right now on many...</p>
+                  <span className="color">4 hours ago</span>
+                </div>
+              </a>
+            </li>
+            {/* Notification */}
+            <li className="notifications-not-read">
+              <a href="dashboard-messages.html">
+                <span className="notification-avatar status-offline"><img src="images/user-avatar-small-02.jpg"  /></span>
+                <div className="notification-text">
+                  <strong>Sindy Forest</strong>
+                  <p className="notification-msg-text">Hi Tom! Hate to break it to you, but I'm actually on vacation until...</p>
+                  <span className="color">Yesterday</span>
+                </div>
+              </a>
+            </li>
+            {/* Notification */}
+            <li className="notifications-not-read">
+              <a href="dashboard-messages.html">
+                <span className="notification-avatar status-online"><img src="images/user-avatar-placeholder.png" /></span>
+                <div className="notification-text">
+                  <strong>Marcin Kowalski</strong>
+                  <p className="notification-msg-text">I received payment. Thanks for cooperation!</p>
+                  <span className="color">Yesterday</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="dashboard-messages.html" className="header-notifications-button ripple-effect button-sliding-icon">View All Messages<i className="icon-material-outline-arrow-right-alt" /></a>
+    </div>
+  </div>
+</div>
+{/*  User Notifications / End */}
+{/* User Menu */}
+<div className="header-widget">
 
-<header id="header-container" className="fullwidth transparent-header">
-<div id="header"> 
+
+  {/*  agregar el componente */}
+  <HeaderNavImg/>
+  
+</div>
+{/* User Menu / End */}
+{/* Mobile Navigation Button */}
+<span className="mmenu-trigger">
+  <button className="hamburger hamburger--collapse" type="button">
+    <span className="hamburger-box">
+      <span className="hamburger-inner" />
+    </span>
+  </button>
+</span>
+</div>);
+
+//const {isAuthenticated}= this.props.auth;
+//const { isAuthenticated }= this.props.auth;
+//const isAuthenticated= true;
+  class Header extends React.Component {
+
+  //const Header =({ siteTitle}) => (
+  //start nav
+
+  render() {
+    const { isAuthenticated }= this.props.auth;
+    return (
+      <header id="header-container" className="fullwidth">
+        <div id="header">
           <div className="container">
             {/* Left Side Content */}
             <div className="left-side">
               {/* Logo */}
               <div id="logo">
-              <Link to="/">
-                <img src="images/logo2.png" data-sticky-logo="images/logo.png" data-transparent-logo="images/logo2.png" alt="logoBolsadeTrabajo"/>
-              </Link>
+                <Link to="/">
+                  <img src="images/logo2.png" data-sticky-logo="images/logo.png" data-transparent-logo="images/logo2.png" alt="logoBolsadeTrabajo" />
+                </Link>
               </div>
               {/* Main Navigation */}
               <nav id="navigation">
                 <ul id="responsive">
-                  <li><a href="#" className="current">Home</a>
+                  <li>
+                    <Link to="/" className="current"> Inicio</Link>
+                    {/* Main sub menu 
                     <ul className="dropdown-nav">
                       <li><a href="index.html">Home 1</a></li>
                       <li><a href="index-2.html">Home 2</a></li>
                       <li><a href="index-3.html">Home 3</a></li>
-                    </ul>
+                    </ul>*/}
                   </li>
                   <li><a href="#">Find Work</a>
                     <ul className="dropdown-nav">
@@ -162,6 +313,8 @@ const Header =({ siteTitle}) => (
                       <li><a href="pages-contact.html">Contact</a></li>
                     </ul>
                   </li>
+                  <li><Link to="/login" className="current"> login</Link>
+                  </li>
                 </ul>
               </nav>
               <div className="clearfix" />
@@ -169,193 +322,31 @@ const Header =({ siteTitle}) => (
             </div>
             {/* Left Side Content / End */}
             {/* Right Side Content / End */}
-            <div className="right-side">
-              {/*  User Notifications */}
-              <div className="header-widget hide-on-mobile">
-                {/* Notifications */}
-                <div className="header-notifications">
-                  {/* Trigger */}
-                  <div className="header-notifications-trigger">
-                    <a href="#"><i className="icon-feather-bell" /><span>4</span></a>
-                  </div>
-                  {/* Dropdown */}
-                  <div className="header-notifications-dropdown">
-                    <div className="header-notifications-headline">
-                      <h4>Notifications</h4>
-                      <button className="mark-as-read ripple-effect-dark" title="Mark all as read" data-tippy-placement="left">
-                        <i className="icon-feather-check-square" />
-                      </button>
-                    </div>
-                    <div className="header-notifications-content">
-                      <div className="header-notifications-scroll" data-simplebar>
-                        <ul>
-                          {/* Notification */}
-                          <li className="notifications-not-read">
-                            <a href="dashboard-manage-candidates.html">
-                              <span className="notification-icon"><i className="icon-material-outline-group" /></span>
-                              <span className="notification-text">
-                                <strong>Michael Shannah</strong> applied for a job <span className="color">Full Stack Software Engineer</span>
-                              </span>
-                            </a>
-                          </li>
-                          {/* Notification */}
-                          <li>
-                            <a href="dashboard-manage-bidders.html">
-                              <span className="notification-icon"><i className=" icon-material-outline-gavel" /></span>
-                              <span className="notification-text">
-                                <strong>Gilbert Allanis</strong> placed a bid on your <span className="color">iOS App Development</span> project
-                              </span>
-                            </a>
-                          </li>
-                          {/* Notification */}
-                          <li>
-                            <a href="dashboard-manage-jobs.html">
-                              <span className="notification-icon"><i className="icon-material-outline-autorenew" /></span>
-                              <span className="notification-text">
-                                Your job listing <span className="color">Full Stack PHP Developer</span> is expiring.
-                              </span>
-                            </a>
-                          </li>
-                          {/* Notification */}
-                          <li>
-                            <a href="dashboard-manage-candidates.html">
-                              <span className="notification-icon"><i className="icon-material-outline-group" /></span>
-                              <span className="notification-text">
-                                <strong>Sindy Forrest</strong> applied for a job <span className="color">Full Stack Software Engineer</span>
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Messages */}
-                <div className="header-notifications">
-                  <div className="header-notifications-trigger">
-                    <a href="#"><i className="icon-feather-mail" /><span>3</span></a>
-                  </div>
-                  {/* Dropdown */}
-                  <div className="header-notifications-dropdown">
-                    <div className="header-notifications-headline">
-                      <h4>Messages</h4>
-                      <button className="mark-as-read ripple-effect-dark" title="Mark all as read" data-tippy-placement="left">
-                        <i className="icon-feather-check-square" />
-                      </button>
-                    </div>
-                    <div className="header-notifications-content">
-                      <div className="header-notifications-scroll" data-simplebar>
-                        <ul>
-                          {/* Notification */}
-                          <li className="notifications-not-read">
-                            <a href="dashboard-messages.html">
-                              <span className="notification-avatar status-online"><img src="images/user-avatar-small-03.jpg"  /></span>
-                              <div className="notification-text">
-                                <strong>David Peterson</strong>
-                                <p className="notification-msg-text">Thanks for reaching out. I'm quite busy right now on many...</p>
-                                <span className="color">4 hours ago</span>
-                              </div>
-                            </a>
-                          </li>
-                          {/* Notification */}
-                          <li className="notifications-not-read">
-                            <a href="dashboard-messages.html">
-                              <span className="notification-avatar status-offline"><img src="images/user-avatar-small-02.jpg"  /></span>
-                              <div className="notification-text">
-                                <strong>Sindy Forest</strong>
-                                <p className="notification-msg-text">Hi Tom! Hate to break it to you, but I'm actually on vacation until...</p>
-                                <span className="color">Yesterday</span>
-                              </div>
-                            </a>
-                          </li>
-                          {/* Notification */}
-                          <li className="notifications-not-read">
-                            <a href="dashboard-messages.html">
-                              <span className="notification-avatar status-online"><img src="images/user-avatar-placeholder.png" /></span>
-                              <div className="notification-text">
-                                <strong>Marcin Kowalski</strong>
-                                <p className="notification-msg-text">I received payment. Thanks for cooperation!</p>
-                                <span className="color">Yesterday</span>
-                              </div>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <a href="dashboard-messages.html" className="header-notifications-button ripple-effect button-sliding-icon">View All Messages<i className="icon-material-outline-arrow-right-alt" /></a>
-                  </div>
-                </div>
-              </div>
-              {/*  User Notifications / End */}
-              {/* User Menu */}
-              <div className="header-widget">
-              
-              
-                {/*  agregar el componente */}
-                <HeaderNavImg/>
-                
-              </div>
-              {/* User Menu / End */}
-              {/* Mobile Navigation Button */}
-              <span className="mmenu-trigger">
-                <button className="hamburger hamburger--collapse" type="button">
-                  <span className="hamburger-box">
-                    <span className="hamburger-inner" />
-                  </span>
-                </button>
-              </span>
-            </div>
+            {/*isAuthenticated ? userLinks : guesLinks*/}
             {/* Right Side Content / End */}
           </div>
         </div>
         {/* Header / End */}
 
-      
+
       </header>
-        
 
-)
 
-/*
-const Header = ({ siteTitle }) => (
-
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-
-    
-
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+    )
+  }
 }
 
-Header.defaultProps = {
-  siteTitle: '',
+
+Header.PropTypes={
+  auth: React.PropTypes.object.isRequired
 }
-*/
-export default Header
+
+function mapStateToProps(state){
+  return{
+    auth: state.auth
+  }
+}
+
+
+//export default connect(mapStateToProps)(Header);
+export default Header;
