@@ -2,14 +2,46 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { connect } from 'react-redux'
-import $ from 'jquery'
+//import $ from 'jquery'
+
+
+
+
+///////////////////////////////////*
+/*
+const Counter = ({ count, increment }) => (
+  <div>
+    <p>Count: {count}</p>
+    <button onClick={increment}>Increment</button>
+  </div>
+)
+
+Counter.propTypes = {
+  count: PropTypes.number.isRequired,
+  increment: PropTypes.func.isRequired,
+}
+
+const mapStateToProps = ({ count }) => {
+  return { count }
+}
+
+const mapDispatchToProps = dispatch => {
+  return { increment: () => dispatch({ type: `INCREMENT` }) }
+}
+
+const ConnectedCounter = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Counter)
+*/
+/////////////////////////////////
 
 
 class HeaderNavImg extends React.Component {
   
   constructor(props) {
     super(props);
-    this.state = {addClass: false}
+   // this.state = {addClass: false}
   }
   toggle() {
     this.setState({addClass: !this.state.addClass});
@@ -205,14 +237,21 @@ const userLinks=(<div className="right-side">
 //const { isAuthenticated }= this.props.auth;
 //const isAuthenticated= true;
   class Header extends React.Component {
-
+    constructor(props) {
+      super(props);
+    //  this.props.auth=true
+    }
+    
   //const Header =({ siteTitle}) => (
   //start nav
 
   render() {
-    const { isAuthenticated }= this.props.auth;
+    
+    console.log(this.props.auth)
+  //  const { isAuthenticated }= this.props.auth;
     return (
       <header id="header-container" className="fullwidth">
+        
         <div id="header">
           <div className="container">
             {/* Left Side Content */}
@@ -322,7 +361,7 @@ const userLinks=(<div className="right-side">
             </div>
             {/* Left Side Content / End */}
             {/* Right Side Content / End */}
-            {/*isAuthenticated ? userLinks : guesLinks*/}
+            {/* isAuthenticated ? userLinks : guesLinks */}
             {/* Right Side Content / End */}
           </div>
         </div>
@@ -337,8 +376,10 @@ const userLinks=(<div className="right-side">
 }
 
 
-Header.PropTypes={
-  auth: React.PropTypes.object.isRequired
+Header.propTypes={
+  auth: PropTypes.object.isRequired
+ //auth:PropTypes.bool.isRequired
+ 
 }
 
 function mapStateToProps(state){
@@ -346,7 +387,13 @@ function mapStateToProps(state){
     auth: state.auth
   }
 }
+//const ConnectedCounter = connect(mapStateToProps)(Header)
 
 
-//export default connect(mapStateToProps)(Header);
-export default Header;
+//export default ConnectedCounter;
+
+export default connect(mapStateToProps)(Header);
+
+
+
+//export default Header;

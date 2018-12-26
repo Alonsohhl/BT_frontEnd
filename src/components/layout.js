@@ -4,8 +4,11 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { Location } from '@reach/router'
 
+
+
+
+
 import Header from './header'
-//import $ from 'jquery'
 import jQuery from 'jquery'
 import $ from 'jquery'//,'jquery.mmenu'
 
@@ -1134,7 +1137,7 @@ const Layout = ({ children }) => (
 
         <div className="Loader"></div>
         <div id="wrapper" className="wrapper">
-          <Header siteTitle={data.site.siteMetadata.title} />
+          <Header siteTitle={data.site.siteMetadata.title}  />
           <div className="clearfix" />
 
 
