@@ -5,14 +5,9 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Location } from '@reach/router'
 
 
-
-
-
-import Header from './header'
+import Header from './header/header'
 import jQuery from 'jquery'
 import $ from 'jquery'//,'jquery.mmenu'
-
-
 
 import ClipboardJS  from 'Clipboard'
 import tippy from 'typpy'
@@ -1137,11 +1132,10 @@ const Layout = ({ children }) => (
 
         <div className="Loader"></div>
         <div id="wrapper" className="wrapper">
+
           <Header siteTitle={data.site.siteMetadata.title}  />
-          <div className="clearfix" />
-
-
-
+        
+				  <div className="clearfix" />
           <Location>
             {({ location }) => {
               return <IsIndex isIndx={location.pathname === '/'} />

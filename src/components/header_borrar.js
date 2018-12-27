@@ -1,8 +1,7 @@
 import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import React from 'react'
-import { connect } from 'react-redux'
-//import $ from 'jquery'
+//import { connect } from 'react-redux'
 
 
 
@@ -90,8 +89,6 @@ class HeaderNavImg extends React.Component {
       )
 }
 }
-
-
 const guesLinks=(<div className="right-side" style={{marginTop: '22px', height: '70%'}}>
 <Link to="/login" className="current"> login</Link>
 </div>);
@@ -233,22 +230,17 @@ const userLinks=(<div className="right-side">
 </span>
 </div>);
 
-//const {isAuthenticated}= this.props.auth;
-//const { isAuthenticated }= this.props.auth;
-//const isAuthenticated= true;
   class Header extends React.Component {
-    constructor(props) {
+    /*constructor(props) {
       super(props);
-    //  this.props.auth=true
-    }
+    }*/
     
-  //const Header =({ siteTitle}) => (
-  //start nav
+
 
   render() {
     
-    console.log(this.props.auth)
-  //  const { isAuthenticated }= this.props.auth;
+    //console.log(this.props.auth)
+
     return (
       <header id="header-container" className="fullwidth">
         
@@ -375,10 +367,9 @@ const userLinks=(<div className="right-side">
   }
 }
 
-
+/*
 Header.propTypes={
   auth: PropTypes.object.isRequired
- //auth:PropTypes.bool.isRequired
  
 }
 
@@ -386,14 +377,14 @@ function mapStateToProps(state){
   return{
     auth: state.auth
   }
-}
+}*/
+
+//export default connect(mapStateToProps)(Header);
+export default Header;
+
+
+//export default Header;
 //const ConnectedCounter = connect(mapStateToProps)(Header)
 
 
 //export default ConnectedCounter;
-
-export default connect(mapStateToProps)(Header);
-
-
-
-//export default Header;

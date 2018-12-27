@@ -809,12 +809,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-12-26T19:39:13.031Z",
+      "buildTime": "2018-12-27T22:25:33.252Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "ddfda33878ace36c97693e4f942b655a",
+        "contentDigest": "7229fc84b392274bb1c02aaf90df2cc7",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
