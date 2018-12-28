@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class HeaderNavImg extends React.Component {
+export default class HeaderNavUser extends React.Component {
   
     constructor(props) {
       super(props);

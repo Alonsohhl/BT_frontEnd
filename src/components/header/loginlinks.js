@@ -1,5 +1,8 @@
 
 import React from 'react'
+import HeaderNavUser from './headernavuser'
+
+import { Link } from 'gatsby'
 
 export const guesLinks=(<div className="right-side" style={{marginTop: '22px', height: '70%'}}>
 <Link to="/login" className="current"> login</Link>
@@ -128,7 +131,7 @@ export const userLinks=(<div className="right-side">
 
 
   {/*  agregar el componente */}
-  <HeaderNavImg/>
+  <HeaderNavUser/>
   
 </div>
 {/* User Menu / End */}
