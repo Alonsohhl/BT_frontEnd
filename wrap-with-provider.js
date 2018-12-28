@@ -1,7 +1,7 @@
 import React from "react"
 import { Provider } from "react-redux"
 
-import store from "./src/state/_helpers/store"
+//import {store} from "./src/state/_helpers/store"
 
 //const store = rootReducer()
 
