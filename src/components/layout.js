@@ -5,7 +5,9 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Location } from '@reach/router'
 
 
-import Header from './header/header'
+import { Header } from './header/header'
+//import {HomePage} from './header/header'
+
 import jQuery from 'jquery'
 import $ from 'jquery'//,'jquery.mmenu'
 

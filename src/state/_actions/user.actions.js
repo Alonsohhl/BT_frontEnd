@@ -4,6 +4,17 @@ import { alertActions } from './';
 //import { history } from '../_helpers';
 
 
+// actions.js
+export const activateGeod = geod => ({
+    type: 'ACTIVATE_GEOD',
+    geod,
+  });
+  
+  export const closeGeod = () => ({
+    type: 'CLOSE_GEOD',
+  });
+  
+
 
 export const userActions = {
     login,
