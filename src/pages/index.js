@@ -18,7 +18,7 @@ const IndexPage = () => (
 <Featured_jobs/>
   
 
-    <Link to="/page-2/">Go to page xd</Link>
+    {/* <Link to="/page-2/">Go to page xd</Link> */}
     
     
 <Footer/>

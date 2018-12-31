@@ -18,14 +18,41 @@ import logo from '../../images/logo_ucsm.png'
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    // console.dir(props)
+
+    // reset login status
+    this.props.dispatch(userActions.logout());
+
+    this.state = {
+      username: '',
+      password: '',
+      submitted: false
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+  handleChange(e) {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+}
+
+handleSubmit(e) {
+    e.preventDefault();
+
+    this.setState({ submitted: true });
+    const { username, password } = this.state;
+    const { dispatch } = this.props;
+    if (username && password) {
+        dispatch(userActions.login(username, password));
+    }
+}
+
 
   render() {
 
     return (
       <header id="header-container" className="fullwidth">
- <ConnectedCounter />
+        
         <div id="header">
           <div className="container">
             {/* Left Side Content */}
@@ -136,7 +163,7 @@ class Header extends React.Component {
             {/* Left Side Content / End */}
             {/* Right Side Content / End */}
             {/* isAuthenticated ? userLinks : guesLinks */}
-                      {/* {this.props.geod.title ? (
+            {/* {this.props.geod.title ? (
                         <button onClick={this.props.closeGeod}>Exit Geod</button>
                       ) : (
                           <button
@@ -149,7 +176,7 @@ class Header extends React.Component {
                         )} */}
 
             {/* Right Side Content / End */}
-           
+
           </div>
         </div>
         {/* Header / End */}
@@ -195,88 +222,14 @@ function mapStateToProps(state){
 
 
 // // AppContainer.js
-const mapStateToProps = state => ({
-  geod: state.geod,
-});
-
-const mapDispatchToProps = {
-  activateGeod,
-  closeGeod,
-};
-
-
-// const mapDispatchToProps = dispatch => {
-//   return { increment: () => dispatch({ type: `INCREMENT` }) }
-// }
-// const mapStateToProps = ({ count }) => {
-//   return { count }
-// }
-
-
-
-//const Counter = ({ count, increment }) => (
-  class Counter extends React.Component {
-
-
-    render() {
-      return(
-  <div>
-    <h1>{this.props.geod.title || 'Hello World!'}</h1>
-
-{this.props.geod.title ? (
-  <button onClick={this.props.closeGeod}>Exit Geod</button>
-) : (
-    <button
-      onClick={() =>
-        this.props.activateGeod({ title: 'I am a geo dude!' })
-      }
-    >
-      Click Me!
-</button>
-  )}
-  </div>
-)
-}
-  }
-
-const ConnectedCounter = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Counter)
-
-
-
-
-
-
-//const mapStateToProps = state => ({
-function mapStateToProps2(state) {
-  const { users, authentication } = state;
-  const { user } = authentication;
-  return {
-      user,
-      users
-  };
-}
-function mapStateToProps3(state) {
-  const { alert } = state;
-  
-  return {
-      alert
-  };
-}
 
 function mapStateToProps4(state) {
-  //  const { loggingIn } = state.authentication;
-   const { loggingIn } = 1;
-  console.dir(state)
-   return {
-       loggingIn
-   };
+  const { loggingIn } = state.authentication;
+  console.dir(state);
+    return {
+        loggingIn
+    };
 }
 
 const connectedHomePage = connect(mapStateToProps4)(Header);
 export { connectedHomePage as Header };
-export default connect(mapStateToProps3)(Header);
-//export {Header};
-//export default Header;

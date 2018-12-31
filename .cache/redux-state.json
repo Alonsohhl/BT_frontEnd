@@ -1399,6 +1399,26 @@
         "description": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
         "owner": "internal-data-bridge"
       }
+    },
+    "SitePage /registro/": {
+      "jsonName": "registro-a80",
+      "internalComponentName": "ComponentRegistro",
+      "path": "/registro/",
+      "component": "E:/Sites/BT3/src/pages/registro.js",
+      "componentChunkName": "component---src-pages-registro-js",
+      "context": {},
+      "pluginCreator___NODE": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "pluginCreatorId": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "componentPath": "E:/Sites/BT3/src/pages/registro.js",
+      "id": "SitePage /registro/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "d62e957310d4a221af296613348914a9",
+        "description": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+        "owner": "internal-data-bridge"
+      }
     }
   },
   "status": {
@@ -1429,7 +1449,8 @@
     "page-4-9ee": "225/path---page-4-9-ee-4e3-NZuapzHg3X9TaN1iIixfv1W23E",
     "404-html-516": "164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E",
     "sq--src-components-image-js": 2011440971,
-    "login-557": "624/path---login-557-29c-NZuapzHg3X9TaN1iIixfv1W23E"
+    "login-557": "624/path---login-557-29c-NZuapzHg3X9TaN1iIixfv1W23E",
+    "registro-a80": "919/path---registro-a-80-e18-NZuapzHg3X9TaN1iIixfv1W23E"
   },
   "components": {
     "E:/Sites/BT3/.cache/dev-404-page.js": {
@@ -1459,6 +1480,10 @@
     "E:/Sites/BT3/src/pages/page-4.js": {
       "query": "",
       "componentPath": "E:/Sites/BT3/src/pages/page-4.js"
+    },
+    "E:/Sites/BT3/src/pages/registro.js": {
+      "query": "",
+      "componentPath": "E:/Sites/BT3/src/pages/registro.js"
     }
   },
   "staticQueryComponents": {

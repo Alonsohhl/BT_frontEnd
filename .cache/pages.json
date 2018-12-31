@@ -38,5 +38,10 @@
         "componentChunkName": "component---src-pages-page-4-js",
         "jsonName": "page-4-9ee",
         "path": "/page-4/"
+    },
+    {
+        "componentChunkName": "component---src-pages-registro-js",
+        "jsonName": "registro-a80",
+        "path": "/registro/"
     }
 ]

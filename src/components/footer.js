@@ -2,6 +2,8 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
+import logo from '../images/logo_ucsm.png'
+// import logo from '../../images/logo_ucsm.png'
 const Footer =( ) => (
 //{/* Footer ================================================== */}
 <div id="footer">
@@ -16,7 +18,7 @@ const Footer =( ) => (
             <div className="footer-rows-left">
               <div className="footer-row">
                 <div className="footer-row-inner footer-logo">
-                  <img src="images/logo2.png" alt="logo" />
+                  <img src={logo} alt="logo" />
                 </div>
               </div>
             </div>

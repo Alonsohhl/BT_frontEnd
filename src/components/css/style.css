@@ -15593,3 +15593,21 @@ ul.dashboard-box-list > li:hover {
 	.padding-left-90 { padding-left: 90px !important; }
 	.padding-left-95 { padding-left: 95px !important; }
 	.padding-left-100 { padding-left: 100px !important; }
+
+
+
+	.alert-danger {
+		color: #721c24;
+		background-color: #f8d7da;
+		border-color: #f5c6cb;
+	}
+	.alert {
+		position: absolute;
+		padding: .65rem 2.25rem;
+		margin-bottom: 1rem;
+		border: 1px solid transparent;
+		border-radius: .25rem;
+		margin-left: 25rem;
+		margin-top: -4.1rem;
+		z-index: 200;
+	}

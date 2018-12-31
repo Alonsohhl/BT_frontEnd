@@ -1,7 +1,8 @@
 import { userConstants } from '../_constants';
 import { userService } from '../_services';
 import { alertActions } from './';
-//import { history } from '../_helpers';
+import { history } from '../_helpers';
+import axios from 'axios';
 
 
 // actions.js
@@ -53,20 +54,37 @@ function logout() {
 
 function register(user) {
     return dispatch => {
-        dispatch(request(user));
+        return axios.post("http://localhost:7000/insUsu/",{
+            "usuUsuario"	:"JJJJJJJJJJJJJJJ",
+            "usuNombre" 	:"Alonso Huayta",
+            "usuPassword"	:"alonsoucsm",
+            "usuPrograma"	:"Sistemas"
+        },{
+            headers: {
+              'Access-Control-Allow-Origin': '*',
+            }}
+        ).then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+        console.log("Registrado")
+        // dispatch(request(user));
 
-        userService.register(user)
-            .then(
-                user => { 
-                    dispatch(success());
-               //     history.push('/login');
-                    dispatch(alertActions.success('Registration successful'));
-                },
-                error => {
-                    dispatch(failure(error));
-                    dispatch(alertActions.error(error));
-                }
-            );
+
+        // userService.register(user)
+        //     .then(
+        //         user => { 
+        //             dispatch(success());
+        //             history.push('/login');
+        //             dispatch(alertActions.success('Registration successful'));
+        //         },
+        //         error => {
+        //             dispatch(failure(error));
+        //             dispatch(alertActions.error(error));
+        //         }
+        //     );
     };
 
     function request(user) { return { type: userConstants.REGISTER_REQUEST, user } }

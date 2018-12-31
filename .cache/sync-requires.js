@@ -9,6 +9,7 @@ exports.components = {
   "component---src-pages-login-js": preferDefault(require("E:\\Sites\\BT3\\src\\pages\\login.js")),
   "component---src-pages-page-2-js": preferDefault(require("E:\\Sites\\BT3\\src\\pages\\page-2.js")),
   "component---src-pages-page-3-js": preferDefault(require("E:\\Sites\\BT3\\src\\pages\\page-3.js")),
-  "component---src-pages-page-4-js": preferDefault(require("E:\\Sites\\BT3\\src\\pages\\page-4.js"))
+  "component---src-pages-page-4-js": preferDefault(require("E:\\Sites\\BT3\\src\\pages\\page-4.js")),
+  "component---src-pages-registro-js": preferDefault(require("E:\\Sites\\BT3\\src\\pages\\registro.js"))
 }
 
