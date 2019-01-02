@@ -358,7 +358,7 @@ header.fullwidth .container {
 .header-widget {
 	display: inline-block;
 	height: 100%;
-	border-left: 1px solid #e0e0e0;
+	/*border-left: 1px solid #e0e0e0;*/
 	padding: 0 30px;
 	text-align: left;
 	float: left;
@@ -15602,12 +15602,45 @@ ul.dashboard-box-list > li:hover {
 		border-color: #f5c6cb;
 	}
 	.alert {
-		position: absolute;
+		
+
 		padding: .65rem 2.25rem;
-		margin-bottom: 1rem;
-		border: 1px solid transparent;
-		border-radius: .25rem;
-		margin-left: 25rem;
-		margin-top: -4.1rem;
-		z-index: 200;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    text-align: center;
+    margin-top: 8rem;
+	z-index: 200;
+	
+	}
+
+	.header-notifications-outer {
+		
+		  text-align: center;
+		  font-size: 18px;
+
+		  display: table;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  height: 100%;
+  width: 100%;
+	}
+
+	.header-notifications-innertext{
+		
+		margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+	}
+
+	.header-notifications-middle{
+		display: table-cell;
+  		vertical-align: middle;
+	}
+
+	.header-notifications-login{
+		width: 100px;
 	}

@@ -4,6 +4,8 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Footer from '../components/footer'
 
+import { history } from '../state/_helpers';
+
 
 import { userActions } from '../state/_actions';
 import { alertActions } from '../state/_actions';
@@ -15,10 +17,12 @@ import { connect } from 'react-redux';
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
-    console.dir(props)
-    // alert(props.alert)\
     
     const { dispatch } = this.props;
+    history.listen((location, action) => {
+      // clear alert on location change
+      dispatch(alertActions.clear());
+  });
    // alert(...props)  ,
      
     // reset login status
@@ -30,7 +34,7 @@ class LoginPage extends React.Component {
       password: '',
       submitted: false
     };
-
+    
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -57,19 +61,22 @@ class LoginPage extends React.Component {
   render() {
     // const { loggingIn } = this.props;
     const { username, password, submitted } = this.state;
-    const {loggingIn, alert} = this.props;
-   // const { alert } = this.props;//alertas Ingresadas
+  //  const {loggingIn, alert} = this.props;
+    //const { alertAsPropsi } = this.props.alertAsPropsi;
+   // const { alertAsPropsi } = this.props;
 
+    const { alerti } = this.props;
     return (
-
+        
       <Layout>
+  
         <div>
-          {alert}
+          {/*
         <div className="col-sm-8 col-sm-offset-2">
                         {alert&&alert.message &&
                             <div className={`alert ${alert.type}`}>{alert.message}</div>
                         }
-          </div>  
+                      </div>  */}
           {/* Titlebar================================================== */}
           <div id="titlebar" className="gradient">
             <div className="container">
@@ -83,6 +90,9 @@ class LoginPage extends React.Component {
             </div>
           </div>
           {/* Page Content================================================== */}
+          {alerti.message &&
+                            <div className={`alert ${alerti.type}`}>{alerti.message}</div>
+                        }
           <div className="container">
             <div className="row">
               <div className="col-xl-5 offset-xl-3">
@@ -143,10 +153,12 @@ function mapStateToProps(state) {
   const { loggingIn } = state.authentication;
    const { alert } = state.alert;
   // console.dir(state);
-  return {
-     loggingIn,
-     alert
-  };
+  //return {  //   loggingIn,
+//     alert
+  //};
+   return {
+     alerti: state.alert
+   }
 }
 
 

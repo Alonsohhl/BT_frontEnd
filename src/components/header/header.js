@@ -28,12 +28,15 @@ class Header extends React.Component {
       submitted: false
     };
 
+    console.log('>+>'+this.props.loggingIn)
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange(e) {
     const { name, value } = e.target;
     this.setState({ [name]: value });
+    
 }
 
 handleSubmit(e) {
@@ -163,6 +166,8 @@ handleSubmit(e) {
             {/* Left Side Content / End */}
             {/* Right Side Content / End */}
             {/* isAuthenticated ? userLinks : guesLinks */}
+            {/* true ? userLinks : guesLinks */}
+            {userLinks}
             {/* {this.props.geod.title ? (
                         <button onClick={this.props.closeGeod}>Exit Geod</button>
                       ) : (

@@ -4,9 +4,35 @@ import HeaderNavUser from './headernavuser'
 
 import { Link } from 'gatsby'
 
-export const guesLinks=(<div className="right-side" style={{marginTop: '22px', height: '70%'}}>
-<Link to="/login" className="current"> login</Link>
-</div>);
+export const guesLinks = (
+    <div>
+      
+   
+  
+  <div className="right-side">
+  
+    <div className="header-widget" >
+    <div className="header-notifications-outer">
+          <div className="header-notifications-middle">
+          <div class="header-notifications-innertext">
+            <Link to="/login" className=""> login</Link>
+          </div>
+          </div>
+        </div>
+
+      
+    </div>
+    {/* Mobile Navigation Button */}
+    <span className="mmenu-trigger">
+      <button className="hamburger hamburger--collapse" type="button">
+        <span className="hamburger-box">
+          <span className="hamburger-inner" />
+        </span>
+      </button>
+    </span>
+  </div>
+  </div>
+);
 
 export const userLinks=(<div className="right-side">
 {/*  User Notifications */}
@@ -130,7 +156,7 @@ export const userLinks=(<div className="right-side">
 <div className="header-widget">
 
 
-  {/*  agregar el componente */}
+  {/*  agregar el componente FIX*/}
   <HeaderNavUser/>
   
 </div>
