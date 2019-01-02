@@ -826,6 +826,10 @@
         "license": "MIT",
         "dependencies": [
           {
+            "name": "axios",
+            "version": "^0.18.0"
+          },
+          {
             "name": "bootstrap",
             "version": "^4.1.3"
           },
@@ -870,6 +874,10 @@
             "version": "^2.1.8"
           },
           {
+            "name": "history",
+            "version": "^4.7.2"
+          },
+          {
             "name": "jquery",
             "version": "^3.3.1"
           },
@@ -900,6 +908,10 @@
           {
             "name": "react-redux",
             "version": "^6.0.0"
+          },
+          {
+            "name": "redux-form",
+            "version": "^8.1.0"
           },
           {
             "name": "redux-logger",
@@ -1043,12 +1055,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-12-29T20:34:12.010Z",
+      "buildTime": "2018-12-31T11:56:51.806Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "a14774a75750524cb9440e39e9ac86bc",
+        "contentDigest": "74b687148c492abe1ba0d2dcf9442b13",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1380,6 +1392,26 @@
         "owner": "internal-data-bridge"
       }
     },
+    "SitePage /registro/": {
+      "jsonName": "registro-a80",
+      "internalComponentName": "ComponentRegistro",
+      "path": "/registro/",
+      "component": "E:/Sites/BT3/src/pages/registro.js",
+      "componentChunkName": "component---src-pages-registro-js",
+      "context": {},
+      "pluginCreator___NODE": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "pluginCreatorId": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+      "componentPath": "E:/Sites/BT3/src/pages/registro.js",
+      "id": "SitePage /registro/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "d62e957310d4a221af296613348914a9",
+        "description": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
+        "owner": "internal-data-bridge"
+      }
+    },
     "SitePage /404.html": {
       "jsonName": "404-html-516",
       "internalComponentName": "Component404Html",
@@ -1400,30 +1432,96 @@
         "owner": "internal-data-bridge"
       }
     },
-    "SitePage /registro/": {
-      "jsonName": "registro-a80",
-      "internalComponentName": "ComponentRegistro",
-      "path": "/registro/",
-      "component": "E:/Sites/BT3/src/pages/registro.js",
-      "componentChunkName": "component---src-pages-registro-js",
-      "context": {},
-      "pluginCreator___NODE": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
-      "pluginCreatorId": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
-      "componentPath": "E:/Sites/BT3/src/pages/registro.js",
-      "id": "SitePage /registro/",
-      "parent": "SOURCE",
+    "c054c15d-071f-5bfe-be16-65ebfdff5145": {
+      "id": "c054c15d-071f-5bfe-be16-65ebfdff5145",
       "children": [],
+      "parent": "___SOURCE___",
       "internal": {
-        "type": "SitePage",
-        "contentDigest": "d62e957310d4a221af296613348914a9",
-        "description": "870508fb-80c1-584b-9c8a-28d9ee967cf4",
-        "owner": "internal-data-bridge"
-      }
+        "contentDigest": "575a8acf57538750bc5b75da5548db14",
+        "type": "File",
+        "mediaType": "image/gif",
+        "description": "File \"src\\images\\loading.gif\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "images",
+      "absolutePath": "E:/Sites/BT3/src/images/loading.gif",
+      "relativePath": "loading.gif",
+      "extension": "gif",
+      "size": 36689,
+      "prettySize": "36.7 kB",
+      "modifiedTime": "2018-12-31T16:05:35.709Z",
+      "accessTime": "2018-12-31T16:05:56.227Z",
+      "changeTime": "2018-12-31T16:05:59.294Z",
+      "birthTime": "2018-12-31T16:05:56.227Z",
+      "root": "E:/",
+      "dir": "E:/Sites/BT3/src/images",
+      "base": "loading.gif",
+      "ext": ".gif",
+      "name": "loading",
+      "relativeDirectory": "",
+      "dev": 844055037,
+      "mode": 33206,
+      "nlink": 1,
+      "uid": 0,
+      "gid": 0,
+      "rdev": 0,
+      "ino": 562949953614702,
+      "atimeMs": 1546272356227.4995,
+      "mtimeMs": 1546272335708.5083,
+      "ctimeMs": 1546272359294.4448,
+      "birthtimeMs": 1546272356227.4995,
+      "atime": "2018-12-31T16:05:56.227Z",
+      "mtime": "2018-12-31T16:05:35.709Z",
+      "ctime": "2018-12-31T16:05:59.294Z",
+      "birthtime": "2018-12-31T16:05:56.227Z"
+    },
+    "d1b38d1e-3144-5f58-8321-fe85aff5bb1c": {
+      "id": "d1b38d1e-3144-5f58-8321-fe85aff5bb1c",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "a90361fdbd3bed85025e2e3c9368f1ba",
+        "type": "File",
+        "mediaType": "image/svg+xml",
+        "description": "File \"src\\images\\loading2.svg\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "images",
+      "absolutePath": "E:/Sites/BT3/src/images/loading2.svg",
+      "relativePath": "loading2.svg",
+      "extension": "svg",
+      "size": 855,
+      "prettySize": "855 B",
+      "modifiedTime": "2018-12-31T16:06:38.834Z",
+      "accessTime": "2018-12-31T16:06:50.032Z",
+      "changeTime": "2018-12-31T16:06:53.696Z",
+      "birthTime": "2018-12-31T16:06:50.032Z",
+      "root": "E:/",
+      "dir": "E:/Sites/BT3/src/images",
+      "base": "loading2.svg",
+      "ext": ".svg",
+      "name": "loading2",
+      "relativeDirectory": "",
+      "dev": 844055037,
+      "mode": 33206,
+      "nlink": 1,
+      "uid": 0,
+      "gid": 0,
+      "rdev": 0,
+      "ino": 562949953614703,
+      "atimeMs": 1546272410032.1162,
+      "mtimeMs": 1546272398833.9846,
+      "ctimeMs": 1546272413696.3005,
+      "birthtimeMs": 1546272410032.1162,
+      "atime": "2018-12-31T16:06:50.032Z",
+      "mtime": "2018-12-31T16:06:38.834Z",
+      "ctime": "2018-12-31T16:06:53.696Z",
+      "birthtime": "2018-12-31T16:06:50.032Z"
     }
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "bc085dd92de21eb21b77faa06752d4b5"
+    "PLUGINS_HASH": "ff2f0980c45401ad3c574405ddcebf9f"
   },
   "componentDataDependencies": {
     "nodes": {
@@ -1487,14 +1585,6 @@
     }
   },
   "staticQueryComponents": {
-    "sq--src-components-image-js": {
-      "name": "eSitesBt3SrcComponentsImageJs2011440971",
-      "componentPath": "E:/Sites/BT3/src/components/image.js",
-      "id": "sq--src-components-image-js",
-      "jsonName": "sq--src-components-image-js",
-      "query": "query eSitesBt3SrcComponentsImageJs2011440971 {\n  placeholderImage: file(relativePath: {eq: \"gatsby-astronaut.png\"}) {\n    childImageSharp {\n      fluid(maxWidth: 300) {\n        ...GatsbyImageSharpFluid\n      }\n    }\n  }\n}\n\nfragment GatsbyImageSharpFluid on ImageSharpFluid {\n  base64\n  aspectRatio\n  src\n  srcSet\n  sizes\n}\n",
-      "hash": 2011440971
-    },
     "sq--src-components-layout-js": {
       "name": "SiteTitleQuery",
       "componentPath": "E:/Sites/BT3/src/components/layout.js",
@@ -1502,6 +1592,14 @@
       "jsonName": "sq--src-components-layout-js",
       "query": "query SiteTitleQuery {\n  site {\n    siteMetadata {\n      title\n    }\n  }\n}\n",
       "hash": 755544856
+    },
+    "sq--src-components-image-js": {
+      "name": "eSitesBt3SrcComponentsImageJs2011440971",
+      "componentPath": "E:/Sites/BT3/src/components/image.js",
+      "id": "sq--src-components-image-js",
+      "jsonName": "sq--src-components-image-js",
+      "query": "query eSitesBt3SrcComponentsImageJs2011440971 {\n  placeholderImage: file(relativePath: {eq: \"gatsby-astronaut.png\"}) {\n    childImageSharp {\n      fluid(maxWidth: 300) {\n        ...GatsbyImageSharpFluid\n      }\n    }\n  }\n}\n\nfragment GatsbyImageSharpFluid on ImageSharpFluid {\n  base64\n  aspectRatio\n  src\n  srcSet\n  sizes\n}\n",
+      "hash": 2011440971
     }
   }
 }

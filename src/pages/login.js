@@ -6,6 +6,8 @@ import Footer from '../components/footer'
 
 
 import { userActions } from '../state/_actions';
+import { alertActions } from '../state/_actions';
+
 import { connect } from 'react-redux';
 
 //http://jasonwatmore.com/post/2017/09/16/react-redux-user-registration-and-login-tutorial-example
@@ -13,9 +15,15 @@ import { connect } from 'react-redux';
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
-
+    console.dir(props)
+    // alert(props.alert)\
+    
+    const { dispatch } = this.props;
+   // alert(...props)  ,
+     
     // reset login status
-    this.props.dispatch(userActions.logout());
+//    this.props.dispatch(userActions.logout());
+//        dispatch(alertActions.clear());
 
     this.state = {
       username: '',
@@ -29,6 +37,7 @@ class LoginPage extends React.Component {
   handleChange(e) {
     const { name, value } = e.target;
     this.setState({ [name]: value });
+    console.log(this.props)
   }
 
   handleSubmit(e) {
@@ -37,20 +46,30 @@ class LoginPage extends React.Component {
     this.setState({ submitted: true });
     const { username, password } = this.state;
     const { dispatch } = this.props;
-    if (username && password) {
+    // if (username && password) {
       dispatch(userActions.login(username, password));
-    }
+    // }
   }
 
 
+
+
   render() {
-    const { loggingIn } = this.props;
+    // const { loggingIn } = this.props;
     const { username, password, submitted } = this.state;
-    
+    const {loggingIn, alert} = this.props;
+   // const { alert } = this.props;//alertas Ingresadas
+
     return (
 
       <Layout>
         <div>
+          {alert}
+        <div className="col-sm-8 col-sm-offset-2">
+                        {alert&&alert.message &&
+                            <div className={`alert ${alert.type}`}>{alert.message}</div>
+                        }
+          </div>  
           {/* Titlebar================================================== */}
           <div id="titlebar" className="gradient">
             <div className="container">
@@ -86,9 +105,14 @@ class LoginPage extends React.Component {
                       <input type="password" className="input-text with-border" name="password" id="password" placeholder="Contraseña" value={password} onChange={this.handleChange} required />
                     </div>
                     <a href="#" className="forgot-password">¿Olvidaste la contraseña?</a>
+
+                    <button className="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form" >
+                          Acceder 
+                          <i className="icon-material-outline-arrow-right-alt" />
+                    </button>
                   </form>
                   {/* Button */}
-                  <button className="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form">Acceder <i className="icon-material-outline-arrow-right-alt" /></button>
+                  
                   {/* Social Login
                 <div className="social-login-separator"><span>or</span></div>
                 <div className="social-login-buttons">
@@ -114,16 +138,18 @@ class LoginPage extends React.Component {
 }//)
 
 
+
 function mapStateToProps(state) {
   const { loggingIn } = state.authentication;
-  console.dir(state);
+   const { alert } = state.alert;
+  // console.dir(state);
   return {
-    loggingIn
+     loggingIn,
+     alert
   };
 }
 
-// const connectedHomePage = connect(mapStateToProps)(LoginPage);
-// export { connectedHomePage as Header };
+
 export default connect(mapStateToProps)(LoginPage);
 
-// export default LoginPage
+//export default LoginPage

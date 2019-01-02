@@ -8,15 +8,64 @@ import Layout from '../components/layout'
 import Footer from '../components/footer'
 
 
-import { Field, reduxForm } from 'redux-form'
+import loadImg from '../images/loading2.svg'
 
+
+import { Field, reduxForm } from 'redux-form'
+import { SubmissionError } from 'redux-form'
 
 const email = value =>
-  value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
-    ? 'Invalid email address'
-    : undefined
+    value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
+        ? 'Correo Electronico Invalido'
+        : undefined
+
+const fitLength = len => value =>
+    value && value.length != len ? `Debe ser de ${len} numeros` : undefined
+const Length10 = fitLength(10)
+
+const number = value =>
+    value && isNaN(Number(value)) ? 'Debe ser un numero' : undefined
+
 
 const required = value => (value || typeof value === 'number' ? undefined : 'Requerido')
+
+const passwordsMustMatch = (value, allValues) => 
+  value !== allValues.usuPassword ? 
+    'Contraseñas no coinciden' :
+     undefined
+
+
+
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const showResults = (async function showResults(values) {
+    await sleep(500); // simulate server latency
+    window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`);
+});
+function submito(user) {
+    
+    console.log('holat')
+    return sleep(1000).then(() => {
+        console.dir(user)
+        console.log('holax')
+        //        userActions.register(user)
+
+        // simulate server latency
+        //   if (!['john', 'paul', 'george', 'ringo'].includes(values.username)) {
+        //     throw new SubmissionError({
+        //       username: 'User does not exist',
+        //       _error: 'Login failed!'
+        //     })
+        //   } else if (values.password !== 'redux-form') {
+        //     throw new SubmissionError({
+        //       password: 'Wrong password',
+        //       _error: 'Login failed!'
+        //     })
+        //   } else {
+        //     window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`)
+        //   }
+    })
+}
+
 
 
 class Register extends React.Component {
@@ -36,6 +85,9 @@ class Register extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
+        console.log('>' + props)
+
     }
 
     handleChange(event) {
@@ -47,26 +99,43 @@ class Register extends React.Component {
                 [name]: value
             }
         });
+
     }
 
     handleSubmit(event) {
-        event.preventDefault();
+        // event.preventDefault();
 
+         this.setState({ submitted: true });
+        // const { user } = this.state;
+        // const { dispatch } = this.props;
+        // if (user.firstName && user.lastName && user.username && user.password) {
+        //     dispatch(userActions.register(user));
+        // }
+        // console.log('xD')
+    }
+
+    // example() {
+    example = values => {
+        alert(values);
+        console.dir(values);
         this.setState({ submitted: true });
         const { user } = this.state;
         const { dispatch } = this.props;
-        if (user.firstName && user.lastName && user.username && user.password) {
-            dispatch(userActions.register(user));
-        }
+        // if (user.firstName && user.lastName && user.username && user.password) {
+        dispatch(userActions.register(values));
+        // }
+
     }
 
     render() {
-        const { registering  } = this.props;
+        const { registering } = this.props;
         const { user, submitted } = this.state;
+        const { simplex } = this.props;
 
         return (
-            
+
             <Layout>
+                <button onClick={this.example}>ejemplo</button>
                 <div id="titlebar" className="gradient">
                     <div className="container">
                         <div className="row">
@@ -99,10 +168,12 @@ class Register extends React.Component {
                                     </div>
                                 </div>
                                 {/* Form */}
-                                
 
-                                <Formito onSubmit={userActions.register(user)}/>
-                                                               {/* Social Login */}
+                                <Formito onSubmit={this.example} />
+                                {/* <Formito onSubmit={userActions.register(user)} /> */}
+                                {simplex && <img src={loadImg} />}
+                                {/* <Formito onSubmit={ submito(user)}/> */}
+                                {/* Social Login */}
                                 <div className="social-login-separator"><span>or</span></div>
                                 <div className="social-login-buttons">
                                     <button className="facebook-login ripple-effect"><i className="icon-brand-facebook-f" /> Register via Facebook</button>
@@ -113,15 +184,15 @@ class Register extends React.Component {
                     </div>
                 </div>
                 <div className="margin-top-100" />
-                
+
 
                 <Footer />
-                
+
 
             </Layout>
         )
     }
-}//)
+}
 
 
 function mapStateToProps(state) {
@@ -131,10 +202,6 @@ function mapStateToProps(state) {
     };
 }
 
-// const connectedRegisterPage = connect(mapStateToProps)(RegisterPage);
-// export { connectedRegisterPage as Register };
-
-
 const renderField = ({
     input,
     label,
@@ -143,115 +210,117 @@ const renderField = ({
     icon,
     className,
     meta: { touched, error, warning }
-  }) => (
-    <div className="input-with-icon-left">
-        <i className={icon} />         
-        <input {...input} placeholder={placeholder} type={type} className={className}/>
-        {/* <div class="alert alert-danger" role="alert"></div> */}
-        {touched &&
-          ((error && <span  class="alert alert-danger">{error}</span>) ||
-            (warning && <span>{warning}</span>))}
-        
-        
-    </div>
-    // <div>
-    //   <label>{label}</label>
-    //   <div>
-    //     <input {...input} placeholder={label} type={type} />
-    //     {touched &&
-    //       ((error && <span>{error}</span>) ||
-    //         (warning && <span>{warning}</span>))}
-    //   </div>
-    // </div>
-  )
+}) => (
+        <div className="input-with-icon-left">
+            <i className={icon} />
+            <input {...input} placeholder={placeholder} type={type} className={className} />
+            {/* <div class="alert alert-danger" role="alert"></div> */}
+            {touched &&
+                ((error && <span className="alert alert-danger">{error}</span>) ||
+                    (warning && <span>{warning}</span>))}
 
+
+        </div>
+        
+    )
 
 const SimpleForm = props => {
     const { handleSubmit, pristine, reset, submitting } = props
-    return (      
+    return (
 
-      <form onSubmit={handleSubmit}>
-        {/* <div className="input-with-icon-left"> */}
+        <form onSubmit={handleSubmit}>
+            {/* <div className="input-with-icon-left"> */}
             {/* <i className="icon-line-awesome-user" />          */}
             <Field
-              name="firstName"
-              component={renderField}
-              type="text"
-              placeholder="Nombre"
-              className="input-text with-border"
-              icon="icon-line-awesome-user"
-              validate={required}
+                name="usuNombre"
+                component={renderField}
+                type="text"
+                placeholder="Nombre"
+                className="input-text with-border"
+                icon="icon-line-awesome-user"
+                validate={required}
             />
-         
-        {/* </div> */}
-        <div className="input-with-icon-left">
-            <i className="icon-material-baseline-mail-outline" />         
-            <Field
-              name="mail"
-              component="input"
-              type="text"
-              placeholder="Correo Electronico"
-              className="input-text with-border"
-              validate={[email,required]}
-            />
-         
-        </div>
 
-        <div className="input-with-icon-left">
-            <i className="icon-line-awesome-barcode" />         
+            {/* </div> */}
+            {/* <div className="input-with-icon-left">
+            <i className="icon-material-baseline-mail-outline" />          */}
             <Field
-              name="codigoucsm"
-              component="input"
-              type="text"
-              placeholder="Codigo Universitario"
-              className="input-text with-border"
+                name="usuUsuario"
+                component={renderField}
+                type="text"
+                placeholder="Correo Electronico"
+                className="input-text with-border"
+                icon="icon-material-baseline-mail-outline"
+                validate={[email, required]}
             />
-         
-        </div>
 
-        <div className="input-with-icon-left">
-            <i className="icon-line-awesome-key" />         
-            <Field
-              name="contrasena"
-              component="input"
-              type="password"
-              placeholder="Contraseña"
-              className="input-text with-border"
-            />
-         
-        </div>
+            {/* </div> */}
 
-        <div className="input-with-icon-left">
-            <i className="icon-line-awesome-key" />         
+            {/* <div className="input-with-icon-left">
+            <i className="icon-line-awesome-barcode" />          */}
             <Field
-              name="rep_contrasena"
-              component="input"
-              type="password"
-              placeholder="Repita la contraseña"
-              className="input-text with-border"
+                name="usuCodAlumno"
+                component={renderField}
+                type="text"
+                placeholder="Codigo Universitario"
+                className="input-text with-border"
+                icon="icon-line-awesome-barcode"
+                validate={[Length10, required, number]}
             />
-         
-        </div>
-        {/* <button className="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form">Register <i className="icon-material-outline-arrow-right-alt" /></button> */}
-        <button type="submit" className="button full-width button-sliding-icon ripple-effect margin-top-10"  disabled={pristine || submitting}>
-        Registrarse <i className="icon-material-outline-arrow-right-alt" />
-        </button>
-        
-        
-      </form>
+
+            {/* </div> */}
+
+            {/* <div className="input-with-icon-left">
+                <i className="icon-line-awesome-key" /> */}
+            <Field
+                name="usuPassword"
+                component={renderField}
+                type="password"
+                placeholder="Contraseña"
+                className="input-text with-border"
+                icon="icon-line-awesome-key"
+                validate={[required, number]}
+            />
+
+            {/* </div> */}
+
+            {/* <div className="input-with-icon-left">
+                <i className="icon-line-awesome-key" /> */}
+                <Field
+                    name="rep_contrasena"
+                    component={renderField}
+                    type="password"
+                    placeholder="Repita la contraseña"
+                    className="input-text with-border"
+                    icon="icon-line-awesome-key"
+                    validate={[required, passwordsMustMatch]}
+                    
+                />
+
+            {/* </div> */}
+            {/* <button className="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form">Register <i className="icon-material-outline-arrow-right-alt" /></button> */}
+            <button type="submit" className="button full-width button-sliding-icon ripple-effect margin-top-10" disabled={pristine || submitting}>
+                Registrarse <i className="icon-material-outline-arrow-right-alt" />
+                {true &&
+                    <img src={loadImg} />
+                }
+            </button>
+
+
+
+        </form>
     )
-  }
+}
 
 
-  const Formito = reduxForm({
-    form: 'simplex' // a unique identifier for this form
-  })(SimpleForm)
+const Formito = reduxForm({
+    form: 'simplex', // a unique identifier for this form
+    // onSubmit: submito
+})(SimpleForm)
 
-  const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-  const showResults =  (async function showResults(values) {
-    await sleep(500); // simulate server latency
-    window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`);
-  }); 
+
+
+
 
 export default connect(mapStateToProps)(Register);
 

@@ -3,7 +3,7 @@ import { userConstants } from '../_constants';
 //let user = JSON.parse(localStorage.getItem('user')); //UserLoged Previolsly
 //const initialState = user ? { loggedIn: true, user } : {};
 
-const initialState =  {};
+const initialState =  {loggedIn: true};
 
 export function authentication(state = initialState, action) {
     switch (action.type) {

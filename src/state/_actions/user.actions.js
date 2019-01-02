@@ -33,7 +33,7 @@ function login(username, password) {
             .then(
                 user => { 
                     dispatch(success(user));
-                 //   history.push('/');
+                    history.push('/');
                 },
                 error => {
                     dispatch(failure(error));
@@ -52,24 +52,34 @@ function logout() {
     return { type: userConstants.LOGOUT };
 }
 
+
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 function register(user) {
     return dispatch => {
-        return axios.post("http://localhost:7000/insUsu/",{
-            "usuUsuario"	:"JJJJJJJJJJJJJJJ",
-            "usuNombre" 	:"Alonso Huayta",
-            "usuPassword"	:"alonsoucsm",
-            "usuPrograma"	:"Sistemas"
-        },{
+        var config = {
             headers: {
-              'Access-Control-Allow-Origin': '*',
-            }}
-        ).then(function (response) {
-            console.log(response);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-        console.log("Registrado")
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json',
+              },
+              withCredentials: true,
+              credentials: 'same-origin',
+        };
+        console.dir(user);
+        return axios.post("http://localhost:3000/insUsu/",user        
+            ).then(function (response) {
+                console.dir(response);
+                console.log('>exito');
+                    //     // user => { 
+                    //     // dispatch(success());
+                    //     // history.push('/login');
+                    //     // dispatch(alertActions.success('Registration successful'));
+                    // }
+            })
+            .catch(function (error) {
+                console.log('>fracaso');
+                console.log(error);
+            });
+            console.log("Registrado")
         // dispatch(request(user));
 
 

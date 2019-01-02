@@ -10,8 +10,6 @@ export default  combineReducers({
   authentication,
   registration,
   form: reduxFormReducer,
-  // users
  alert
-// geod2
 ,users
 });
