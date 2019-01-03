@@ -21,53 +21,46 @@ const email = value =>
     value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
         ? 'Correo Electronico Invalido'
         : undefined
-
 const fitLength = len => value =>
     value && value.length != len ? `Debe ser de ${len} numeros` : undefined
 const Length10 = fitLength(10)
-
 const number = value =>
     value && isNaN(Number(value)) ? 'Debe ser un numero' : undefined
-
-
-const required = value => (value || typeof value === 'number' ? undefined : 'Requerido')
-
+const required = value => (value || typeof value === 'number' ? undefined : 'Campo requerido')
 const passwordsMustMatch = (value, allValues) => 
   value !== allValues.usuPassword ? 
     'Contraseñas no coinciden' :
      undefined
 
-
-
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-const showResults = (async function showResults(values) {
+// const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+/*const showResults = (async function showResults(values) {
     await sleep(500); // simulate server latency
     window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`);
-});
-function submito(user) {
+});*/
+// function submito(user) {
     
-    console.log('holat')
-    return sleep(1000).then(() => {
-        console.dir(user)
-        console.log('holax')
-        //        userActions.register(user)
+//     console.log('holat')
+//     return sleep(1000).then(() => {
+//         console.dir(user)
+//         console.log('holax')
+//         //        userActions.register(user)
 
-        // simulate server latency
-        //   if (!['john', 'paul', 'george', 'ringo'].includes(values.username)) {
-        //     throw new SubmissionError({
-        //       username: 'User does not exist',
-        //       _error: 'Login failed!'
-        //     })
-        //   } else if (values.password !== 'redux-form') {
-        //     throw new SubmissionError({
-        //       password: 'Wrong password',
-        //       _error: 'Login failed!'
-        //     })
-        //   } else {
-        //     window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`)
-        //   }
-    })
-}
+//         // simulate server latency
+//         //   if (!['john', 'paul', 'george', 'ringo'].includes(values.username)) {
+//         //     throw new SubmissionError({
+//         //       username: 'User does not exist',
+//         //       _error: 'Login failed!'
+//         //     })
+//         //   } else if (values.password !== 'redux-form') {
+//         //     throw new SubmissionError({
+//         //       password: 'Wrong password',
+//         //       _error: 'Login failed!'
+//         //     })
+//         //   } else {
+//         //     window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`)
+//         //   }
+//     })
+// }
 
 
 
@@ -76,11 +69,8 @@ class Register extends React.Component {
     constructor(props) {
         super(props);
         const { dispatch } = this.props;
-        history.listen((location, action) => {
-            // clear alert on location change
-            dispatch(alertActions.clear());
-        });
-
+        
+        dispatch(alertActions.clear());
         this.state = {
             user: {
                 firstName: '',
@@ -93,8 +83,6 @@ class Register extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-
-        console.log('>' + props)
 
     }
 
@@ -139,11 +127,12 @@ class Register extends React.Component {
         const { registering } = this.props;
         const { user, submitted } = this.state;
         const { simplex } = this.props;
-
+        const { alerti } = this.props;
+        
         return (
 
             <Layout>
-                <button onClick={this.example}>ejemplo</button>
+                
                 <div id="titlebar" className="gradient">
                     <div className="container">
                         <div className="row">
@@ -156,6 +145,7 @@ class Register extends React.Component {
                     </div>
                 </div>
                 <div className="container">
+                
                     <div className="row">
                         <div className="col-xl-5 offset-xl-3">
                             <div className="login-register-page">
@@ -164,6 +154,9 @@ class Register extends React.Component {
                                     <h3 style={{ fontSize: '26px' }}>Crea tu Usuario!</h3>
                                     <span>Acceder a tu cuenta en su lugar <Link to="/login/" > Logeate</Link></span>
                                 </div>
+                                {alerti.message &&
+                                    <div className={`alert ${alerti.type}`}>{alerti.message}</div>
+                                }
                                 {/* Account Type */}
                                 <div className="account-type">
                                     <div>
@@ -207,7 +200,8 @@ function mapStateToProps(state) {
     const { registering } = state.registration;
     
     return {
-        registering
+        registering,
+        alerti: state.alert
     };
 }
 
@@ -224,9 +218,10 @@ const renderField = ({
             <i className={icon} />
             <input {...input} placeholder={placeholder} type={type} className={className} />
             {/* <div class="alert alert-danger" role="alert"></div> */}
+            
             {touched &&
-                ((error && <span className="alert alert-danger">{error}</span>) ||
-                    (warning && <span>{warning}</span>))}
+        ((error && <span className='spanx' >{error} </span>) ||
+          (warning && <span>{warning}</span>))}
 
 
         </div>

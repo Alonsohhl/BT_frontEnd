@@ -3,6 +3,7 @@ import { userService } from '../_services';
 import { alertActions } from './';
 import { history } from '../_helpers';
 import axios from 'axios';
+import { navigate } from "gatsby"
 
 
 // actions.js
@@ -34,6 +35,7 @@ function login(username, password) {
                 user => { 
                     dispatch(success(user));
                     history.push('/');
+                    navigate('/');
                 },
                 error => {
                     dispatch(failure(error));
@@ -69,9 +71,20 @@ function register(user) {
             ).then(function (response) {
                 console.dir(response);
                 if(response.status===200){
-                    console.log('Error de Registro');
-                    dispatch(failure(response.data.error.errmsg));
-                    dispatch(alertActions.error(response.data.error.errmsg));
+                    
+                    switch (response.data.error.code) {
+                        case 11000:
+                            dispatch(failure('El Usuario ya existe'));
+                            dispatch(alertActions.error('El Usuario ya existe'));
+                            return;
+                                                  
+                        default:
+                            dispatch(failure('Error al registrarse'));
+                            dispatch(alertActions.error('Error al registrarse'));
+                      }
+                    // console.log('Error de con el Usuario');
+                    // dispatch(failure(response.data.error.errmsg));
+                    // dispatch(alertActions.error(response.data.error.errmsg));
                 }
                     
                 console.log('>exitox');

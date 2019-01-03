@@ -13,22 +13,17 @@ import { alertActions } from '../state/_actions';
 import { connect } from 'react-redux';
 
 //http://jasonwatmore.com/post/2017/09/16/react-redux-user-registration-and-login-tutorial-example
-//const LoginPage = () => (
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
     
     const { dispatch } = this.props;
-    history.listen((location, action) => {
-      // clear alert on location change
-      dispatch(alertActions.clear());
-  });
-   // alert(...props)  ,
-     
-    // reset login status
-//    this.props.dispatch(userActions.logout());
-//        dispatch(alertActions.clear());
-
+                                // history.listen((location, action) => {
+                                //   // clear alert on location change
+                                //   console.log('cambio de url')
+                                //   dispatch(alertActions.clear());
+                              // });
+    dispatch(alertActions.clear());
     this.state = {
       username: '',
       password: '',
@@ -71,12 +66,7 @@ class LoginPage extends React.Component {
       <Layout>
   
         <div>
-          {/*
-        <div className="col-sm-8 col-sm-offset-2">
-                        {alert&&alert.message &&
-                            <div className={`alert ${alert.type}`}>{alert.message}</div>
-                        }
-                      </div>  */}
+         
           {/* Titlebar================================================== */}
           <div id="titlebar" className="gradient">
             <div className="container">
@@ -91,8 +81,8 @@ class LoginPage extends React.Component {
           </div>
           {/* Page Content================================================== */}
           {alerti.message &&
-                            <div className={`alert ${alerti.type}`}>{alerti.message}</div>
-                        }
+              <div className={`alert ${alerti.type}`}>{alerti.message}</div>
+          }
           <div className="container">
             <div className="row">
               <div className="col-xl-5 offset-xl-3">

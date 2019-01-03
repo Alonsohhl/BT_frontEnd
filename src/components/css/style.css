@@ -1,5 +1,14 @@
 @charset "UTF-8";
-
+@font-face {
+	font-family: 'Line-Awesome';
+	src:
+	  url('../fonts/Line-Awesome.ttf?15lwq9') format('truetype'),
+	  url('../fonts/Line-Awesome.woff?15lwq9') format('woff'),
+	  url('../fonts/Line-Awesome.svg?15lwq9#Line-Awesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
+  }
+  
 /*
 * Author: Vasterad
 * URL: http://purethemes.net
@@ -131,7 +140,7 @@ select {
 	outline: none;
 	font-size: 16px;
 	color: #808080;
-	margin: 0 0 16px 0;
+	margin: 16px 0 0 0;
 	max-width: 100%;
 	width: 100%;
 	box-sizing: border-box;
@@ -15601,10 +15610,31 @@ ul.dashboard-box-list > li:hover {
 		background-color: #f8d7da;
 		border-color: #f5c6cb;
 	}
-	.alert {
-		
+	
+	@keyframes cd-bounce-right {
+		0% {
+		  opacity: .2;
+		  transform: translateX(-200px);
+		}
+		60% {
+		  opacity: .7;
+		  transform: translateX(15px);
+		}
+		100% {
+		  opacity: 1;
+		  transform: translateX(0);
+		}
+	  }
 
-		padding: .65rem 2.25rem;
+	  
+	.alert {
+		padding: .40rem;
+		border: 1px solid transparent;
+		border-radius: .25rem;
+		text-align: center;
+		margin-bottom: 1rem;
+	/*
+	padding: .65rem 2.25rem;
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: .25rem;
@@ -15613,7 +15643,33 @@ ul.dashboard-box-list > li:hover {
     text-align: center;
     margin-top: 8rem;
 	z-index: 200;
-	
+	*/
+	animation-name: cd-bounce-right;
+	animation-duration: 0.6s;
+	}
+
+	.spanx:before {
+				
+		font-family: 'Line-Awesome' !important;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+	  
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: "\f1cd";
+		margin-right: 5px;
+
+		
+	}
+	.spanx {
+		border: none;
+		font-weight: bold;
+		color: #e60c0c;
 	}
 
 	.header-notifications-outer {

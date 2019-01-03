@@ -7,6 +7,8 @@ import { guesLinks, userLinks } from './loginlinks'
 
 import { userActions } from '../../state/_actions';
 import { alertActions } from '../../state/_actions';
+import { history } from '../../state/_helpers';
+
 
 
 import { activateGeod, closeGeod } from '../../state/_actions';
@@ -27,6 +29,11 @@ class Header extends React.Component {
       password: '',
       submitted: false
     };
+    const { dispatch } = this.props;
+    history.listen((location, action) => {
+      // clear alert on location change
+      dispatch(alertActions.clear());
+    });
 
     console.log('>+>'+this.props.loggingIn)
 
