@@ -151,7 +151,7 @@ class LoginPage extends React.Component {
 
 function mapStateToProps(state) {
   const { loggingIn } = state.authentication;
-   const { alert } = state.alert;
+  const { alert } = state.alert;
   // console.dir(state);
   //return {  //   loggingIn,
 //     alert

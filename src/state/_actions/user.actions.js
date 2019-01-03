@@ -68,7 +68,19 @@ function register(user) {
         return axios.post("http://localhost:3000/insUsu/",user        
             ).then(function (response) {
                 console.dir(response);
-                console.log('>exito');
+                if(response.status===200){
+                    console.log('Error de Registro');
+                    dispatch(failure(response.data.error.errmsg));
+                    dispatch(alertActions.error(response.data.error.errmsg));
+                }
+                    
+                console.log('>exitox');
+
+                //     dispatch(success());
+                //     history.push('/login');
+                //     dispatch(alertActions.success('Registration successful'));
+                    
+                    
                     //     // user => { 
                     //     // dispatch(success());
                     //     // history.push('/login');

@@ -19,7 +19,7 @@ export default class HeaderNavUser extends React.Component {
       
       <div className="header-notifications user-menu">
       <div className="header-notifications-trigger">
-        <a href="#"><div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt /></div></a>
+        <a href="#"><div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg"  /></div></a>
       </div>
       {/* Dropdown */}
       <div className="header-notifications-dropdown">
@@ -27,7 +27,7 @@ export default class HeaderNavUser extends React.Component {
         <div className="user-status">
           {/* User Name / Avatar */}
           <div className="user-details">
-            <div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt /></div>
+            <div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg"  /></div>
             <div className="user-name">
               Tom Smith <span>Freelancer</span>
             </div>

@@ -166,8 +166,9 @@ handleSubmit(e) {
             {/* Left Side Content / End */}
             {/* Right Side Content / End */}
             {/* isAuthenticated ? userLinks : guesLinks */}
-            {/* true ? userLinks : guesLinks */}
-            {userLinks}
+            
+            {false ? userLinks : guesLinks}
+            
             {/* {this.props.geod.title ? (
                         <button onClick={this.props.closeGeod}>Exit Geod</button>
                       ) : (

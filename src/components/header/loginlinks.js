@@ -14,7 +14,7 @@ export const guesLinks = (
     <div className="header-widget" >
     <div className="header-notifications-outer">
           <div className="header-notifications-middle">
-          <div class="header-notifications-innertext">
+          <div className="header-notifications-innertext">
             <Link to="/login" className=""> login</Link>
           </div>
           </div>

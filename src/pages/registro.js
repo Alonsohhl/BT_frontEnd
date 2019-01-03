@@ -9,6 +9,9 @@ import Footer from '../components/footer'
 
 
 import loadImg from '../images/loading2.svg'
+import { history } from '../state/_helpers';
+import { alertActions } from '../state/_actions';
+
 
 
 import { Field, reduxForm } from 'redux-form'
@@ -72,6 +75,11 @@ class Register extends React.Component {
 
     constructor(props) {
         super(props);
+        const { dispatch } = this.props;
+        history.listen((location, action) => {
+            // clear alert on location change
+            dispatch(alertActions.clear());
+        });
 
         this.state = {
             user: {
@@ -116,7 +124,7 @@ class Register extends React.Component {
 
     // example() {
     example = values => {
-        alert(values);
+      
         console.dir(values);
         this.setState({ submitted: true });
         const { user } = this.state;
@@ -197,6 +205,7 @@ class Register extends React.Component {
 
 function mapStateToProps(state) {
     const { registering } = state.registration;
+    
     return {
         registering
     };
