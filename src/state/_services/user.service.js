@@ -14,24 +14,27 @@ export const userService = {
 };
 
 function login(username, password) {
-    const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
-    };
-    return axios.post('http://localhost:7000/usuLogin/',{
-        // params: {
+    return axios.post('http://localhost:7000/login/',{
             usuUsuario: username,
             usuPassword:password
-        // }
       })
-//    return fetch(`/users/authenticate`, requestOptions)
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
+      //.then(handleResponse)
+        .then(user => {
+            // login successful if there's a jwt token in the response
+            if (user.token) {
+                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                localStorage.setItem('user', JSON.stringify(user));
+            }
+
+            return user;
         });
+        // .then(function (response) {
+        //     console.log(">>"+response);
+        //     console.log(response);
+        // })
+        // .catch(function (error) {
+        //     console.log(error);
+        // });
         // .then(user => {
         //     // // login successful if there's a jwt token in the response
         //     // if (user.token) {
@@ -69,6 +72,22 @@ function getById(id) {
 }
 
 function register(user) {
+    
+    return axios.post("http://localhost:3000/insUsu/",user)
+        .then(function (response) {
+            switch (response.status) {
+                case 200:
+                    console.log("correcto mundo")
+                    // dispatch(failure('El Usuario ya existe'));
+                    // dispatch(alertActions.error('El Usuario ya existe'));
+                    return;
+                                          
+                default:
+                    console.log("INcorrecto mundo")
+                    return;
+            }
+        })
+
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

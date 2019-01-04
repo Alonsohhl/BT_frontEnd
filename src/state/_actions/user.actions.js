@@ -36,12 +36,13 @@ function login(username, password) {
             .then(
                 user => { 
                     dispatch(success(user));
-                    history.push('/');
+                    // history.push('/');
                     navigate('/');
                 },
                 error => {
                     dispatch(failure(error));
-                    dispatch(alertActions.error("Datos Incorrectos"));
+                    dispatch(alertActions.error(error.response.data.message));
+                    console.dir(error.response.data.message)
                 }
             );
     };
@@ -62,73 +63,24 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 function register(user) {
     return dispatch => {
-        // var config = {
-        //     headers: {
-        //         'Access-Control-Allow-Origin': '*',
-        //         'Content-Type': 'application/json',
-        //       },
-        //       withCredentials: true,
-        //       credentials: 'same-origin',
-        // };
-        console.dir(user);
-        return axios.post("http://localhost:3000/insUsu/",user        
-            ).then(function (response) {
-                console.dir(response);
-                if(response.status===200){
-                    
-                    switch (response.data.error.code) {
-                        case 11000:
-                            // dispatch(failure('El Usuario ya existe'));
-                            // dispatch(alertActions.error('El Usuario ya existe'));
-                            return;
-                                                  
-                        default:
-                            // dispatch(failure('Error al registrarse'));
-                            // dispatch(alertActions.error('Error al registrarse'));
-                      }
-                    // console.log('Error de con el Usuario');
-                    // dispatch(failure(response.data.error.errmsg));
-                    // dispatch(alertActions.error(response.data.error.errmsg));
+        dispatch(request({ user }));//dispara la accion de REQUEST Register
+        userService.register(user)
+            .then(
+                user => { 
+                    dispatch(success());
+                    navigate('/login');
+                    dispatch(alertActions.success('Registration successful'));
+                },
+                error => {
+                    dispatch(failure(error));
+                    dispatch(alertActions.error(error));
                 }
-                    
-                console.log('>exitox');
-
-                //     dispatch(success());
-                //     history.push('/login');
-                //     dispatch(alertActions.success('Registration successful'));
-                    
-                    
-                    //     // user => { 
-                    //     // dispatch(success());
-                    //     // history.push('/login');
-                    //     // dispatch(alertActions.success('Registration successful'));
-                    // }
-            })
-            .catch(function (error) {
-                console.log('>fracaso');
-                console.log(error);
-            });
-            console.log("Registrado")
-        // dispatch(request(user));
-
-
-        // userService.register(user)
-        //     .then(
-        //         user => { 
-        //             dispatch(success());
-        //             history.push('/login');
-        //             dispatch(alertActions.success('Registration successful'));
-        //         },
-        //         error => {
-        //             dispatch(failure(error));
-        //             dispatch(alertActions.error(error));
-        //         }
-        //     );
-    };
+            )
 
     function request(user) { return { type: userConstants.REGISTER_REQUEST, user } }
     function success(user) { return { type: userConstants.REGISTER_SUCCESS, user } }
     function failure(error) { return { type: userConstants.REGISTER_FAILURE, error } }
+    }
 }
 
 function getAll() {

@@ -1,4 +1,4 @@
 module.exports = [{
-      plugin: require('E:/Sites/BT3/gatsby-browser.js'),
+      plugin: require('C:/Sites/BT_frontEnd/gatsby-browser.js'),
       options: {"plugins":[]},
     }]
