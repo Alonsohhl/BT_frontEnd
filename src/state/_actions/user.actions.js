@@ -27,9 +27,11 @@ export const userActions = {
 };
 
 function login(username, password) {
+    
     return dispatch => {
         dispatch(request({ username }));
-
+        console.log('username'+username)
+        console.log('password'+password)
         userService.login(username, password)
             .then(
                 user => { 
@@ -56,16 +58,18 @@ function logout() {
 
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+
 function register(user) {
     return dispatch => {
-        var config = {
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json',
-              },
-              withCredentials: true,
-              credentials: 'same-origin',
-        };
+        // var config = {
+        //     headers: {
+        //         'Access-Control-Allow-Origin': '*',
+        //         'Content-Type': 'application/json',
+        //       },
+        //       withCredentials: true,
+        //       credentials: 'same-origin',
+        // };
         console.dir(user);
         return axios.post("http://localhost:3000/insUsu/",user        
             ).then(function (response) {
@@ -74,13 +78,13 @@ function register(user) {
                     
                     switch (response.data.error.code) {
                         case 11000:
-                            dispatch(failure('El Usuario ya existe'));
-                            dispatch(alertActions.error('El Usuario ya existe'));
+                            // dispatch(failure('El Usuario ya existe'));
+                            // dispatch(alertActions.error('El Usuario ya existe'));
                             return;
                                                   
                         default:
-                            dispatch(failure('Error al registrarse'));
-                            dispatch(alertActions.error('Error al registrarse'));
+                            // dispatch(failure('Error al registrarse'));
+                            // dispatch(alertActions.error('Error al registrarse'));
                       }
                     // console.log('Error de con el Usuario');
                     // dispatch(failure(response.data.error.errmsg));

@@ -1,5 +1,8 @@
 import { authHeader } from '../_helpers';
 
+import axios from 'axios';
+import { navigate } from "gatsby"
+
 export const userService = {
     login,
     logout,
@@ -16,18 +19,30 @@ function login(username, password) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
     };
-
-    return fetch(`/users/authenticate`, requestOptions)
-        .then(handleResponse)
-        .then(user => {
-            // login successful if there's a jwt token in the response
-            if (user.token) {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('user', JSON.stringify(user));
-            }
-
-            return user;
+    return axios.post('http://localhost:7000/usuLogin/',{
+        // params: {
+            usuUsuario: username,
+            usuPassword:password
+        // }
+      })
+//    return fetch(`/users/authenticate`, requestOptions)
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
         });
+        // .then(user => {
+        //     // // login successful if there's a jwt token in the response
+        //     // if (user.token) {
+        //     //     // store user details and jwt token in local storage to keep user logged in between page refreshes
+        //     //     localStorage.setItem('user', JSON.stringify(user));
+        //     // }
+        //     console.log('=='+user);
+        //     // return user;
+
+        //     return true;
+        // });
 }
 
 function logout() {
