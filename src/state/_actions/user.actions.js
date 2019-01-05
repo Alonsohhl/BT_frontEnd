@@ -72,8 +72,9 @@ function register(user) {
                     dispatch(alertActions.success('Registration successful'));
                 },
                 error => {
-                    dispatch(failure(error));
-                    dispatch(alertActions.error(error));
+                    dispatch(failure('el correo electronico ya existe'));
+                    dispatch(alertActions.error('el correo electronico ya existe'));
+                    // console.log(error.error.errmsg)
                 }
             )
 
