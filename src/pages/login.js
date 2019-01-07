@@ -54,12 +54,7 @@ class LoginPage extends React.Component {
 
 
   render() {
-    // const { loggingIn } = this.props;
     const { username, password, submitted } = this.state;
-  //  const {loggingIn, alert} = this.props;
-    //const { alertAsPropsi } = this.props.alertAsPropsi;
-   // const { alertAsPropsi } = this.props;
-
     const { alerti } = this.props;
     return (
         

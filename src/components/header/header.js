@@ -9,8 +9,6 @@ import { userActions } from '../../state/_actions';
 import { alertActions } from '../../state/_actions';
 import { history } from '../../state/_helpers';
 
-
-
 import { activateGeod, closeGeod } from '../../state/_actions';
 
 ///images
@@ -22,7 +20,7 @@ class Header extends React.Component {
     super(props);
 
     // reset login status
-    this.props.dispatch(userActions.logout());
+//    this.props.dispatch(userActions.logout());
 
     this.state = {
       username: '',
@@ -34,8 +32,6 @@ class Header extends React.Component {
       // clear alert on location change
       dispatch(alertActions.clear());
     });
-
-    console.log('>+>'+this.props.loggingIn)
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -174,7 +170,15 @@ handleSubmit(e) {
             {/* Right Side Content / End */}
             {/* isAuthenticated ? userLinks : guesLinks */}
             
-            {false ? userLinks : guesLinks}
+
+            
+					{/* {
+						localStorage.setItem("lastname", "Smith")
+					} */}
+          {localStorage.getItem("user")	? userLinks : guesLinks}
+          
+
+            {/* {false ? userLinks : guesLinks} */}
             
             {/* {this.props.geod.title ? (
                         <button onClick={this.props.closeGeod}>Exit Geod</button>

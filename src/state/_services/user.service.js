@@ -21,9 +21,12 @@ function login(username, password) {
       //.then(handleResponse)
         .then(user => {
             // login successful if there's a jwt token in the response
-            if (user.token) {
+            console.dir(user)
+            if (user.data&&user.data.token) {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', JSON.stringify(user));
+                console.dir('>>'+localStorage.getItem("user"))	
+                console.log('usertokenx')
             }
 
             return user;
@@ -83,18 +86,18 @@ function register(user) {
                     return;
                                           
                 default:
-                    console.log("INcorrecto mundo")
+                    console.log("Registro incorrecto")
                     return;
             }
         })
 
-    const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(user)
-    };
+    // const requestOptions = {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify(user)
+    // };
 
-    return fetch(`/users/register`, requestOptions).then(handleResponse);
+    // return fetch(`/users/register`, requestOptions).then(handleResponse);
 }
 
 function update(user) {

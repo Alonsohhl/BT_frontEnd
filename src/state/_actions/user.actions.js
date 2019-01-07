@@ -61,6 +61,7 @@ function logout() {
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 
+//==========    [ REGISTER USER ]   =================================
 function register(user) {
     return dispatch => {
         dispatch(request({ user }));//dispara la accion de REQUEST Register
@@ -69,12 +70,12 @@ function register(user) {
                 user => { 
                     dispatch(success());
                     navigate('/login');
-                    dispatch(alertActions.success('Registration successful'));
+                    dispatch(alertActions.success('Registro Exitoso'));
                 },
                 error => {
                     dispatch(failure('el correo electronico ya existe'));
                     dispatch(alertActions.error('el correo electronico ya existe'));
-                    // console.log(error.error.errmsg)
+                    console.dir(error)
                 }
             )
 
